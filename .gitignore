@@ -6,8 +6,11 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
+/_Builds/
 /[Bb]uilds/
 /[Ll]ogs/
+/[Rr]esults/
+/[Vv]env/
 /[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.

@@ -1,0 +1,993 @@
+fileFormatVersion: 2
+guid: 51f74f4da25317d47901fd473348fcb8
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: RightToe_End1
+  - first:
+      1: 100004
+    second: RightToe_End10
+  - first:
+      1: 100006
+    second: RightToe_End11
+  - first:
+      1: 100008
+    second: RightToe_End12
+  - first:
+      1: 100010
+    second: RightToe_End13
+  - first:
+      1: 100012
+    second: RightToe_End14
+  - first:
+      1: 100014
+    second: RightToe_End16
+  - first:
+      1: 100016
+    second: RightToe_End17
+  - first:
+      1: 100018
+    second: RightToe_End18
+  - first:
+      1: 100020
+    second: RightToe_End2
+  - first:
+      1: 100022
+    second: RightToe_End20
+  - first:
+      1: 100024
+    second: RightToe_End21
+  - first:
+      1: 100026
+    second: RightToe_End22
+  - first:
+      1: 100028
+    second: RightToe_End24
+  - first:
+      1: 100030
+    second: RightToe_End25
+  - first:
+      1: 100032
+    second: RightToe_End26
+  - first:
+      1: 100034
+    second: RightToe_End28
+  - first:
+      1: 100036
+    second: RightToe_End29
+  - first:
+      1: 100038
+    second: RightToe_End3
+  - first:
+      1: 100040
+    second: RightToe_End30
+  - first:
+      1: 100042
+    second: RightToe_End32
+  - first:
+      1: 100044
+    second: RightToe_End33
+  - first:
+      1: 100046
+    second: RightToe_End34
+  - first:
+      1: 100048
+    second: RightToe_End35
+  - first:
+      1: 100050
+    second: RightToe_End36
+  - first:
+      1: 100052
+    second: RightToe_End37
+  - first:
+      1: 100054
+    second: RightToe_End38
+  - first:
+      1: 100056
+    second: RightToe_End4
+  - first:
+      1: 100058
+    second: RightToe_End40
+  - first:
+      1: 100060
+    second: RightToe_End41
+  - first:
+      1: 100062
+    second: RightToe_End42
+  - first:
+      1: 100064
+    second: RightToe_End44
+  - first:
+      1: 100066
+    second: RightToe_End45
+  - first:
+      1: 100068
+    second: RightToe_End46
+  - first:
+      1: 100070
+    second: RightToe_End48
+  - first:
+      1: 100072
+    second: RightToe_End49
+  - first:
+      1: 100074
+    second: RightToe_End5
+  - first:
+      1: 100076
+    second: RightToe_End50
+  - first:
+      1: 100078
+    second: RightToe_End52
+  - first:
+      1: 100080
+    second: RightToe_End53
+  - first:
+      1: 100082
+    second: RightToe_End54
+  - first:
+      1: 100084
+    second: RightToe_End56
+  - first:
+      1: 100086
+    second: RightToe_End57
+  - first:
+      1: 100088
+    second: RightToe_End58
+  - first:
+      1: 100090
+    second: RightToe_End59
+  - first:
+      1: 100092
+    second: RightToe_End6
+  - first:
+      1: 100094
+    second: RightToe_End61
+  - first:
+      1: 100096
+    second: RightToe_End62
+  - first:
+      1: 100098
+    second: RightToe_End63
+  - first:
+      1: 100100
+    second: RightToe_End64
+  - first:
+      1: 100102
+    second: RightToe_End8
+  - first:
+      1: 100104
+    second: RightToe_End9
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: RightToe_End1
+  - first:
+      4: 400004
+    second: RightToe_End10
+  - first:
+      4: 400006
+    second: RightToe_End11
+  - first:
+      4: 400008
+    second: RightToe_End12
+  - first:
+      4: 400010
+    second: RightToe_End13
+  - first:
+      4: 400012
+    second: RightToe_End14
+  - first:
+      4: 400014
+    second: RightToe_End16
+  - first:
+      4: 400016
+    second: RightToe_End17
+  - first:
+      4: 400018
+    second: RightToe_End18
+  - first:
+      4: 400020
+    second: RightToe_End2
+  - first:
+      4: 400022
+    second: RightToe_End20
+  - first:
+      4: 400024
+    second: RightToe_End21
+  - first:
+      4: 400026
+    second: RightToe_End22
+  - first:
+      4: 400028
+    second: RightToe_End24
+  - first:
+      4: 400030
+    second: RightToe_End25
+  - first:
+      4: 400032
+    second: RightToe_End26
+  - first:
+      4: 400034
+    second: RightToe_End28
+  - first:
+      4: 400036
+    second: RightToe_End29
+  - first:
+      4: 400038
+    second: RightToe_End3
+  - first:
+      4: 400040
+    second: RightToe_End30
+  - first:
+      4: 400042
+    second: RightToe_End32
+  - first:
+      4: 400044
+    second: RightToe_End33
+  - first:
+      4: 400046
+    second: RightToe_End34
+  - first:
+      4: 400048
+    second: RightToe_End35
+  - first:
+      4: 400050
+    second: RightToe_End36
+  - first:
+      4: 400052
+    second: RightToe_End37
+  - first:
+      4: 400054
+    second: RightToe_End38
+  - first:
+      4: 400056
+    second: RightToe_End4
+  - first:
+      4: 400058
+    second: RightToe_End40
+  - first:
+      4: 400060
+    second: RightToe_End41
+  - first:
+      4: 400062
+    second: RightToe_End42
+  - first:
+      4: 400064
+    second: RightToe_End44
+  - first:
+      4: 400066
+    second: RightToe_End45
+  - first:
+      4: 400068
+    second: RightToe_End46
+  - first:
+      4: 400070
+    second: RightToe_End48
+  - first:
+      4: 400072
+    second: RightToe_End49
+  - first:
+      4: 400074
+    second: RightToe_End5
+  - first:
+      4: 400076
+    second: RightToe_End50
+  - first:
+      4: 400078
+    second: RightToe_End52
+  - first:
+      4: 400080
+    second: RightToe_End53
+  - first:
+      4: 400082
+    second: RightToe_End54
+  - first:
+      4: 400084
+    second: RightToe_End56
+  - first:
+      4: 400086
+    second: RightToe_End57
+  - first:
+      4: 400088
+    second: RightToe_End58
+  - first:
+      4: 400090
+    second: RightToe_End59
+  - first:
+      4: 400092
+    second: RightToe_End6
+  - first:
+      4: 400094
+    second: RightToe_End61
+  - first:
+      4: 400096
+    second: RightToe_End62
+  - first:
+      4: 400098
+    second: RightToe_End63
+  - first:
+      4: 400100
+    second: RightToe_End64
+  - first:
+      4: 400102
+    second: RightToe_End8
+  - first:
+      4: 400104
+    second: RightToe_End9
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'RightToe_End58'
+      : rotation error = 0.723494 deg\n\t'RightToe_End63' : rotation error = 0.893620
+      deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'RightToe_End58' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'RightToe_End63' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 1
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000000000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: RightToe_End1
+        weight: 1
+      - path: RightToe_End1/RightToe_End2
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End5
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End5/RightToe_End6
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End12
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End12/RightToe_End13
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End12/RightToe_End13/RightToe_End14
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End16
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End16/RightToe_End17
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End16/RightToe_End17/RightToe_End18
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End20
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End20/RightToe_End21
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End20/RightToe_End21/RightToe_End22
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End24
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End24/RightToe_End25
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End24/RightToe_End25/RightToe_End26
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End28
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End28/RightToe_End29
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End8/RightToe_End9/RightToe_End10/RightToe_End11/RightToe_End28/RightToe_End29/RightToe_End30
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35
+        weight: 1
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End36
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End36/RightToe_End37
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End36/RightToe_End37/RightToe_End38
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End40
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End40/RightToe_End41
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End40/RightToe_End41/RightToe_End42
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End44
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End44/RightToe_End45
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End44/RightToe_End45/RightToe_End46
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End48
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End48/RightToe_End49
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End48/RightToe_End49/RightToe_End50
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End52
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End52/RightToe_End53
+        weight: 0
+      - path: RightToe_End1/RightToe_End2/RightToe_End3/RightToe_End4/RightToe_End32/RightToe_End33/RightToe_End34/RightToe_End35/RightToe_End52/RightToe_End53/RightToe_End54
+        weight: 0
+      - path: RightToe_End1/RightToe_End56
+        weight: 1
+      - path: RightToe_End1/RightToe_End56/RightToe_End57
+        weight: 1
+      - path: RightToe_End1/RightToe_End56/RightToe_End57/RightToe_End58
+        weight: 1
+      - path: RightToe_End1/RightToe_End56/RightToe_End57/RightToe_End58/RightToe_End59
+        weight: 1
+      - path: RightToe_End1/RightToe_End61
+        weight: 1
+      - path: RightToe_End1/RightToe_End61/RightToe_End62
+        weight: 1
+      - path: RightToe_End1/RightToe_End61/RightToe_End62/RightToe_End63
+        weight: 1
+      - path: RightToe_End1/RightToe_End61/RightToe_End62/RightToe_End63/RightToe_End64
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 54
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: RightToe_End1
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End56
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End61
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End57
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End62
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End59
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End64
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End2
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End3
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End5
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End6
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End8
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End32
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End9
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End33
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End10
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End34
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End11
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End35
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToe_End4
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: '@GoalKeeper_Idle(Clone)'
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.39370078, y: 0.39370078, z: 0.39370078}
+    - name: RightToe_End1
+      parentName: '@GoalKeeper_Idle(Clone)'
+      position: {x: 0.00021848618, y: 2.9205394, z: 0.0037656615}
+      rotation: {x: 0.15145828, y: 0.028684922, z: 0.0045823227, w: 0.98803675}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToe_End2
+      parentName: RightToe_End1
+      position: {x: 0.000000003027916, y: 0.24616423, z: -0.028186409}
+      rotation: {x: 0.07303398, y: 0.013657844, z: -0.0017276974, w: 0.99723446}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: RightToe_End3
+      parentName: RightToe_End2
+      position: {x: -0, y: 0.28906703, z: -0.00000009689331}
+      rotation: {x: 0.022464303, y: 0.0048709684, z: 0.012140583, w: 0.9996621}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: RightToe_End4
+      parentName: RightToe_End3
+      position: {x: -0.000000024223327, y: 0.33036277, z: 0.00000029067994}
+      rotation: {x: -0.0006027351, y: 0.0035709427, z: -0.002516581, w: 0.99999034}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: RightToe_End5
+      parentName: RightToe_End4
+      position: {x: -0.000000024223327, y: 0.37165794, z: 0}
+      rotation: {x: -0.27654675, y: -0.0012448, z: -0.023744235, w: 0.96070635}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: RightToe_End6
+      parentName: RightToe_End5
+      position: {x: 0.000000006055832, y: 0.13470379, z: 0.065122575}
+      rotation: {x: -0.22825357, y: -0.04421817, z: 0.0045759524, w: 0.97258633}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: RightToe_End8
+      parentName: RightToe_End4
+      position: {x: -0.17689581, y: 0.33434296, z: -0.004353804}
+      rotation: {x: 0.51237917, y: -0.33096573, z: 0.553349, w: 0.56721616}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: RightToe_End9
+      parentName: RightToe_End8
+      position: {x: 0.00000009689331, y: 0.36728156, z: 0}
+      rotation: {x: -0.11285747, y: 0.09742549, z: 0.097434744, w: 0.9840111}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: RightToe_End10
+      parentName: RightToe_End9
+      position: {x: 0.000000024223327, y: 0.6294298, z: 0}
+      rotation: {x: -0.012511381, y: 0.006950841, z: -0.020873746, w: 0.9996797}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: RightToe_End11
+      parentName: RightToe_End10
+      position: {x: 0.00000019378662, y: 0.7051397, z: 0.00000009689331}
+      rotation: {x: -0.24141061, y: -0.08661098, z: -0.21976846, w: 0.94123393}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: RightToe_End12
+      parentName: RightToe_End11
+      position: {x: 0.061541785, y: 0.07776211, z: 0.05014229}
+      rotation: {x: 0.31067112, y: -0.13346294, z: -0.22130215, w: 0.9147112}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
+    - name: RightToe_End13
+      parentName: RightToe_End12
+      position: {x: 0.00040627364, y: 0.088897526, z: 0.00000019378662}
+      rotation: {x: 0.0136953695, y: -0.009087868, z: 0.09989535, w: 0.9948622}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: RightToe_End14
+      parentName: RightToe_End13
+      position: {x: 0.0028701737, y: 0.08588245, z: 0}
+      rotation: {x: -0.13372593, y: 0.012942212, z: 0.06473471, w: 0.98881716}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: RightToe_End16
+      parentName: RightToe_End11
+      position: {x: 0.0854911, y: 0.25282642, z: 0.0023750488}
+      rotation: {x: 0.19031993, y: -0.014477823, z: -0.06535678, w: 0.9794372}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999998}
+    - name: RightToe_End17
+      parentName: RightToe_End16
+      position: {x: -0.00004360199, y: 0.08685526, z: 0}
+      rotation: {x: 0.26210025, y: -0.00014149053, z: 0.03000041, w: 0.9645742}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: RightToe_End18
+      parentName: RightToe_End17
+      position: {x: 0.0001579361, y: 0.08323058, z: 0}
+      rotation: {x: 0.2743012, y: -0.000040496565, z: 0.028489243, w: 0.96122175}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: RightToe_End20
+      parentName: RightToe_End11
+      position: {x: 0.026797008, y: 0.25206697, z: -0.0052603376}
+      rotation: {x: 0.1833636, y: -0.006455059, z: -0.011387827, w: 0.982958}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: RightToe_End21
+      parentName: RightToe_End20
+      position: {x: -0.00009398651, y: 0.09666251, z: -0.00000038757324}
+      rotation: {x: 0.2812001, y: 0.000094051866, z: 0.030990245, w: 0.95914865}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: RightToe_End22
+      parentName: RightToe_End21
+      position: {x: 0.00001550293, y: 0.087754235, z: 0}
+      rotation: {x: 0.21795219, y: -0.00011148566, z: 0.024021616, w: 0.9756638}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: RightToe_End24
+      parentName: RightToe_End11
+      position: {x: -0.029563311, y: 0.24865061, z: -0.0010160232}
+      rotation: {x: 0.23530897, y: -0.0050073196, z: -0.0053825644, w: 0.97189283}
+      scale: {x: 0.9999998, y: 1, z: 0.99999976}
+    - name: RightToe_End25
+      parentName: RightToe_End24
+      position: {x: -0.000020347596, y: 0.08139939, z: 0}
+      rotation: {x: 0.19622076, y: 0.000029608469, z: 0.022478947, w: 0.98030204}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: RightToe_End26
+      parentName: RightToe_End25
+      position: {x: -0.000008139038, y: 0.07330444, z: 0.00000019378662}
+      rotation: {x: 0.3764518, y: -0.000059439353, z: 0.04325206, w: 0.925426}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: RightToe_End28
+      parentName: RightToe_End11
+      position: {x: -0.08272557, y: 0.2263139, z: -0.000020153808}
+      rotation: {x: 0.10928829, y: 0.002557467, z: 0.020863386, w: 0.9937879}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999998}
+    - name: RightToe_End29
+      parentName: RightToe_End28
+      position: {x: 0.000005232239, y: 0.0720317, z: 0}
+      rotation: {x: 0.23015437, y: 0.00000088619294, z: 0.026558435, w: 0.9727917}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: RightToe_End30
+      parentName: RightToe_End29
+      position: {x: -0.000005038452, y: 0.059860203, z: 0}
+      rotation: {x: 0.41410926, y: 0.000022314804, z: 0.04796226, w: 0.90896267}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: RightToe_End32
+      parentName: RightToe_End4
+      position: {x: 0.17689574, y: 0.3343226, z: -0.0041937362}
+      rotation: {x: 0.52895874, y: 0.25945234, z: -0.5333901, w: 0.60694504}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: RightToe_End33
+      parentName: RightToe_End32
+      position: {x: -0.00000009689331, y: 0.36728156, z: 0}
+      rotation: {x: -0.089311905, y: -0.018148152, z: -0.12651476, w: 0.98776925}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: RightToe_End34
+      parentName: RightToe_End33
+      position: {x: 0.00000014533997, y: 0.6295189, z: 0.00000019378662}
+      rotation: {x: -0.013257844, y: -0.007795234, z: 0.022068603, w: 0.9996382}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: RightToe_End35
+      parentName: RightToe_End34
+      position: {x: -0.00000019378662, y: 0.70509636, z: 0.00000019378662}
+      rotation: {x: -0.15517202, y: 0.012961813, z: 0.11318408, w: 0.9812966}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: RightToe_End36
+      parentName: RightToe_End35
+      position: {x: -0.060017653, y: 0.07234946, z: 0.048506342}
+      rotation: {x: 0.25210643, y: 0.08275238, z: 0.3780056, w: 0.88696456}
+      scale: {x: 0.9999998, y: 1, z: 0.99999994}
+    - name: RightToe_End37
+      parentName: RightToe_End36
+      position: {x: -0.002164015, y: 0.084594764, z: -0.00000019378662}
+      rotation: {x: 0.0058036665, y: -0.010878058, z: -0.19013499, w: 0.9816806}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: RightToe_End38
+      parentName: RightToe_End37
+      position: {x: -0.004602529, y: 0.08747262, z: 0}
+      rotation: {x: -0.12960072, y: -0.01072428, z: -0.060783446, w: 0.9896434}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: RightToe_End40
+      parentName: RightToe_End35
+      position: {x: -0.08567171, y: 0.24238463, z: 0.0016611388}
+      rotation: {x: 0.11646682, y: 0.016626555, z: 0.090012364, w: 0.98896754}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: RightToe_End41
+      parentName: RightToe_End40
+      position: {x: 0.00013720093, y: 0.08725378, z: 0}
+      rotation: {x: 0.1647692, y: -0.00004517988, z: -0.014961261, w: 0.9862187}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: RightToe_End42
+      parentName: RightToe_End41
+      position: {x: -0.000068600464, y: 0.08301475, z: 0}
+      rotation: {x: 0.17593277, y: 0.00015516783, z: -0.014799391, w: 0.98429096}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: RightToe_End44
+      parentName: RightToe_End35
+      position: {x: -0.028580038, y: 0.24324822, z: -0.0014681275}
+      rotation: {x: 0.11889708, y: 0.007103783, z: 0.029901333, w: 0.99243087}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+    - name: RightToe_End45
+      parentName: RightToe_End44
+      position: {x: 0.0002792465, y: 0.09196066, z: 0}
+      rotation: {x: 0.21926942, y: -0.00020304136, z: -0.018696643, w: 0.9754852}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: RightToe_End46
+      parentName: RightToe_End45
+      position: {x: -0.000017634582, y: 0.0895704, z: -0.00000019378662}
+      rotation: {x: 0.22688569, y: 0.0002771087, z: -0.019336868, w: 0.9737294}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.99999994}
+    - name: RightToe_End48
+      parentName: RightToe_End35
+      position: {x: 0.027876593, y: 0.23453103, z: -0.0021258392}
+      rotation: {x: 0.14277329, y: 0.012926395, z: -0.041203115, w: 0.9888129}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
+    - name: RightToe_End49
+      parentName: RightToe_End48
+      position: {x: 0.000032943724, y: 0.082755804, z: -0.00000019378662}
+      rotation: {x: 0.38369063, y: -0.0000284216, z: -0.034460604, w: 0.9228185}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: RightToe_End50
+      parentName: RightToe_End49
+      position: {x: -0.000017925262, y: 0.07479795, z: -0.00000019378662}
+      rotation: {x: 0.21276838, y: 0.000052823394, z: -0.018965803, w: 0.9769186}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: RightToe_End52
+      parentName: RightToe_End35
+      position: {x: 0.086375155, y: 0.2127808, z: 0.0015900192}
+      rotation: {x: 0.19052541, y: -0.009018734, z: -0.14521508, w: 0.9708406}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: RightToe_End53
+      parentName: RightToe_End52
+      position: {x: 0.000124411, y: 0.07450059, z: 0}
+      rotation: {x: 0.24800792, y: -0.000079256584, z: -0.021985939, w: 0.9685085}
+      scale: {x: 0.9999999, y: 0.9999997, z: 0.9999999}
+    - name: RightToe_End54
+      parentName: RightToe_End53
+      position: {x: -0.000027808379, y: 0.059207626, z: -0.00000009689331}
+      rotation: {x: 0.3273538, y: 0.0004473293, z: -0.028348662, w: 0.9444764}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: RightToe_End56
+      parentName: RightToe_End1
+      position: {x: -0.23170643, y: -0.1369895, z: 0.0074700867}
+      rotation: {x: -0.07390176, y: 0.24651718, z: 0.96158725, w: 0.09548787}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: RightToe_End57
+      parentName: RightToe_End56
+      position: {x: -0, y: 1.2471195, z: -0.000000048446655}
+      rotation: {x: -0.27283102, y: -0.029223425, z: -0.009195511, w: 0.9615741}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: RightToe_End58
+      parentName: RightToe_End57
+      position: {x: -0.00000009689331, y: 1.0322334, z: -0.00000014533997}
+      rotation: {x: 0.5382706, y: -0.013695213, z: 0.15505987, w: 0.8282715}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: RightToe_End59
+      parentName: RightToe_End58
+      position: {x: -0, y: 0.47149506, z: 0.000000024223327}
+      rotation: {x: 0.38833046, y: -0.06453422, z: -0.01494395, w: 0.9191362}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: RightToe_End61
+      parentName: RightToe_End1
+      position: {x: 0.23170637, y: -0.1369897, z: 0.008227017}
+      rotation: {x: 0.05819474, y: 0.26121044, z: 0.96192056, w: -0.055599056}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: RightToe_End62
+      parentName: RightToe_End61
+      position: {x: -0.00000009689331, y: 1.2473354, z: -0.00000019378662}
+      rotation: {x: -0.2942486, y: -0.01208999, z: 0.07635127, w: 0.95259756}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: RightToe_End63
+      parentName: RightToe_End62
+      position: {x: -0, y: 1.0322763, z: -0.000000072669984}
+      rotation: {x: 0.54623395, y: -0.047646854, z: -0.1514728, w: 0.82244414}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: RightToe_End64
+      parentName: RightToe_End63
+      position: {x: -0.000000048446655, y: 0.47631854, z: 0}
+      rotation: {x: 0.36536276, y: 0.029789561, z: 0.002660893, w: 0.9303847}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,997 @@
+fileFormatVersion: 2
+guid: 478dcb56671eeb84e8e751a30297de67
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Bip01_End1
+  - first:
+      1: 100004
+    second: Bip01_End10
+  - first:
+      1: 100006
+    second: Bip01_End11
+  - first:
+      1: 100008
+    second: Bip01_End12
+  - first:
+      1: 100010
+    second: Bip01_End13
+  - first:
+      1: 100012
+    second: Bip01_End14
+  - first:
+      1: 100014
+    second: Bip01_End16
+  - first:
+      1: 100016
+    second: Bip01_End17
+  - first:
+      1: 100018
+    second: Bip01_End18
+  - first:
+      1: 100020
+    second: Bip01_End2
+  - first:
+      1: 100022
+    second: Bip01_End20
+  - first:
+      1: 100024
+    second: Bip01_End21
+  - first:
+      1: 100026
+    second: Bip01_End22
+  - first:
+      1: 100028
+    second: Bip01_End24
+  - first:
+      1: 100030
+    second: Bip01_End25
+  - first:
+      1: 100032
+    second: Bip01_End26
+  - first:
+      1: 100034
+    second: Bip01_End28
+  - first:
+      1: 100036
+    second: Bip01_End29
+  - first:
+      1: 100038
+    second: Bip01_End3
+  - first:
+      1: 100040
+    second: Bip01_End30
+  - first:
+      1: 100042
+    second: Bip01_End32
+  - first:
+      1: 100044
+    second: Bip01_End33
+  - first:
+      1: 100046
+    second: Bip01_End34
+  - first:
+      1: 100048
+    second: Bip01_End35
+  - first:
+      1: 100050
+    second: Bip01_End36
+  - first:
+      1: 100052
+    second: Bip01_End37
+  - first:
+      1: 100054
+    second: Bip01_End38
+  - first:
+      1: 100056
+    second: Bip01_End4
+  - first:
+      1: 100058
+    second: Bip01_End40
+  - first:
+      1: 100060
+    second: Bip01_End41
+  - first:
+      1: 100062
+    second: Bip01_End42
+  - first:
+      1: 100064
+    second: Bip01_End44
+  - first:
+      1: 100066
+    second: Bip01_End45
+  - first:
+      1: 100068
+    second: Bip01_End46
+  - first:
+      1: 100070
+    second: Bip01_End48
+  - first:
+      1: 100072
+    second: Bip01_End49
+  - first:
+      1: 100074
+    second: Bip01_End5
+  - first:
+      1: 100076
+    second: Bip01_End50
+  - first:
+      1: 100078
+    second: Bip01_End52
+  - first:
+      1: 100080
+    second: Bip01_End53
+  - first:
+      1: 100082
+    second: Bip01_End54
+  - first:
+      1: 100084
+    second: Bip01_End56
+  - first:
+      1: 100086
+    second: Bip01_End57
+  - first:
+      1: 100088
+    second: Bip01_End58
+  - first:
+      1: 100090
+    second: Bip01_End59
+  - first:
+      1: 100092
+    second: Bip01_End6
+  - first:
+      1: 100094
+    second: Bip01_End61
+  - first:
+      1: 100096
+    second: Bip01_End62
+  - first:
+      1: 100098
+    second: Bip01_End63
+  - first:
+      1: 100100
+    second: Bip01_End64
+  - first:
+      1: 100102
+    second: Bip01_End8
+  - first:
+      1: 100104
+    second: Bip01_End9
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Bip01_End1
+  - first:
+      4: 400004
+    second: Bip01_End10
+  - first:
+      4: 400006
+    second: Bip01_End11
+  - first:
+      4: 400008
+    second: Bip01_End12
+  - first:
+      4: 400010
+    second: Bip01_End13
+  - first:
+      4: 400012
+    second: Bip01_End14
+  - first:
+      4: 400014
+    second: Bip01_End16
+  - first:
+      4: 400016
+    second: Bip01_End17
+  - first:
+      4: 400018
+    second: Bip01_End18
+  - first:
+      4: 400020
+    second: Bip01_End2
+  - first:
+      4: 400022
+    second: Bip01_End20
+  - first:
+      4: 400024
+    second: Bip01_End21
+  - first:
+      4: 400026
+    second: Bip01_End22
+  - first:
+      4: 400028
+    second: Bip01_End24
+  - first:
+      4: 400030
+    second: Bip01_End25
+  - first:
+      4: 400032
+    second: Bip01_End26
+  - first:
+      4: 400034
+    second: Bip01_End28
+  - first:
+      4: 400036
+    second: Bip01_End29
+  - first:
+      4: 400038
+    second: Bip01_End3
+  - first:
+      4: 400040
+    second: Bip01_End30
+  - first:
+      4: 400042
+    second: Bip01_End32
+  - first:
+      4: 400044
+    second: Bip01_End33
+  - first:
+      4: 400046
+    second: Bip01_End34
+  - first:
+      4: 400048
+    second: Bip01_End35
+  - first:
+      4: 400050
+    second: Bip01_End36
+  - first:
+      4: 400052
+    second: Bip01_End37
+  - first:
+      4: 400054
+    second: Bip01_End38
+  - first:
+      4: 400056
+    second: Bip01_End4
+  - first:
+      4: 400058
+    second: Bip01_End40
+  - first:
+      4: 400060
+    second: Bip01_End41
+  - first:
+      4: 400062
+    second: Bip01_End42
+  - first:
+      4: 400064
+    second: Bip01_End44
+  - first:
+      4: 400066
+    second: Bip01_End45
+  - first:
+      4: 400068
+    second: Bip01_End46
+  - first:
+      4: 400070
+    second: Bip01_End48
+  - first:
+      4: 400072
+    second: Bip01_End49
+  - first:
+      4: 400074
+    second: Bip01_End5
+  - first:
+      4: 400076
+    second: Bip01_End50
+  - first:
+      4: 400078
+    second: Bip01_End52
+  - first:
+      4: 400080
+    second: Bip01_End53
+  - first:
+      4: 400082
+    second: Bip01_End54
+  - first:
+      4: 400084
+    second: Bip01_End56
+  - first:
+      4: 400086
+    second: Bip01_End57
+  - first:
+      4: 400088
+    second: Bip01_End58
+  - first:
+      4: 400090
+    second: Bip01_End59
+  - first:
+      4: 400092
+    second: Bip01_End6
+  - first:
+      4: 400094
+    second: Bip01_End61
+  - first:
+      4: 400096
+    second: Bip01_End62
+  - first:
+      4: 400098
+    second: Bip01_End63
+  - first:
+      4: 400100
+    second: Bip01_End64
+  - first:
+      4: 400102
+    second: Bip01_End8
+  - first:
+      4: 400104
+    second: Bip01_End9
+  - first:
+      74: 7400000
+    second: StepBack
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bip01_End58' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Bip01_End63' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: StepBack
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000000000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.29108784
+        functionName: OnStepBack
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip01_End1
+        weight: 1
+      - path: Bip01_End1/Bip01_End2
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End5
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End5/Bip01_End6
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End12
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End12/Bip01_End13
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End12/Bip01_End13/Bip01_End14
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End16
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End16/Bip01_End17
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End16/Bip01_End17/Bip01_End18
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End20
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End20/Bip01_End21
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End20/Bip01_End21/Bip01_End22
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End24
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End24/Bip01_End25
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End24/Bip01_End25/Bip01_End26
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End28
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End28/Bip01_End29
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End8/Bip01_End9/Bip01_End10/Bip01_End11/Bip01_End28/Bip01_End29/Bip01_End30
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35
+        weight: 1
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End36
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End36/Bip01_End37
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End36/Bip01_End37/Bip01_End38
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End40
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End40/Bip01_End41
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End40/Bip01_End41/Bip01_End42
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End44
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End44/Bip01_End45
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End44/Bip01_End45/Bip01_End46
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End48
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End48/Bip01_End49
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End48/Bip01_End49/Bip01_End50
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End52
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End52/Bip01_End53
+        weight: 0
+      - path: Bip01_End1/Bip01_End2/Bip01_End3/Bip01_End4/Bip01_End32/Bip01_End33/Bip01_End34/Bip01_End35/Bip01_End52/Bip01_End53/Bip01_End54
+        weight: 0
+      - path: Bip01_End1/Bip01_End56
+        weight: 1
+      - path: Bip01_End1/Bip01_End56/Bip01_End57
+        weight: 1
+      - path: Bip01_End1/Bip01_End56/Bip01_End57/Bip01_End58
+        weight: 1
+      - path: Bip01_End1/Bip01_End56/Bip01_End57/Bip01_End58/Bip01_End59
+        weight: 1
+      - path: Bip01_End1/Bip01_End61
+        weight: 1
+      - path: Bip01_End1/Bip01_End61/Bip01_End62
+        weight: 1
+      - path: Bip01_End1/Bip01_End61/Bip01_End62/Bip01_End63
+        weight: 1
+      - path: Bip01_End1/Bip01_End61/Bip01_End62/Bip01_End63/Bip01_End64
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Bip01_End1
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End56
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End61
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End57
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End62
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End59
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End64
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End2
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End3
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End5
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End6
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End8
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End32
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End9
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End33
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End10
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End34
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End11
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End35
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bip01_End4
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: '@PL_Damage(Clone)'
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.39370078, y: 0.39370078, z: 0.39370078}
+    - name: Bip01_End1
+      parentName: '@PL_Damage(Clone)'
+      position: {x: -0.0007762058, y: 2.6706944, z: -0.018410904}
+      rotation: {x: -0.05605584, y: -0.000019355512, z: 0.00060811976, w: 0.9984275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip01_End2
+      parentName: Bip01_End1
+      position: {x: -0, y: 0.24616404, z: -0.028186336}
+      rotation: {x: -0.045621447, y: -0.000040230872, z: 0.000110006375, w: 0.9989588}
+      scale: {x: 1, y: 0.9999999, z: 0.9999998}
+    - name: Bip01_End3
+      parentName: Bip01_End2
+      position: {x: -0, y: 0.28906724, z: 0}
+      rotation: {x: 0.032794803, y: -0.00014232808, z: 0.00067276903, w: 0.9994619}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bip01_End4
+      parentName: Bip01_End3
+      position: {x: -0, y: 0.33036238, z: 0.000000048446655}
+      rotation: {x: 0.03279483, y: -0.00012394387, z: 0.0006746314, w: 0.9994619}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bip01_End5
+      parentName: Bip01_End4
+      position: {x: 7.56979e-10, y: 0.37165794, z: 0.000000012111664}
+      rotation: {x: 0.025682723, y: 0.00000004387708, z: 0.0000000011119338, w: 0.99967015}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: Bip01_End6
+      parentName: Bip01_End5
+      position: {x: -0.000000001513958, y: 0.13470301, z: 0.06512306}
+      rotation: {x: -0.022514014, y: 0.0020658814, z: 0.0018298428, w: 0.99974275}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bip01_End8
+      parentName: Bip01_End4
+      position: {x: -0.17689578, y: 0.33434278, z: -0.0043535256}
+      rotation: {x: 0.5233165, y: -0.456861, z: 0.60599005, w: 0.38754874}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Bip01_End9
+      parentName: Bip01_End8
+      position: {x: -0.000000036334992, y: 0.36728147, z: 0}
+      rotation: {x: -0.140614, y: -0.14699592, z: -0.053394984, w: 0.9776344}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: Bip01_End10
+      parentName: Bip01_End9
+      position: {x: -0, y: 0.6294302, z: -0.00000009689331}
+      rotation: {x: -0.009938205, y: 0.0053629694, z: -0.023044595, w: 0.9996706}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Bip01_End11
+      parentName: Bip01_End10
+      position: {x: 0.00000019378662, y: 0.7051397, z: 0}
+      rotation: {x: -0.0003678656, y: -0.06170286, z: 0.20340768, w: 0.9771479}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Bip01_End12
+      parentName: Bip01_End11
+      position: {x: 0.061541554, y: 0.07776211, z: 0.050141998}
+      rotation: {x: 0.14786673, y: -0.21374689, z: -0.16791685, w: 0.9509215}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Bip01_End13
+      parentName: Bip01_End12
+      position: {x: 0.00040637053, y: 0.08889748, z: 0.000000048446655}
+      rotation: {x: 0.018449266, y: 0.020116527, z: 0.12830576, w: 0.99135894}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bip01_End14
+      parentName: Bip01_End13
+      position: {x: 0.002870222, y: 0.085882545, z: -0.000000048446655}
+      rotation: {x: -0.03166998, y: 0.060695708, z: 0.16543452, w: 0.9838417}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip01_End16
+      parentName: Bip01_End11
+      position: {x: 0.08549131, y: 0.25282642, z: 0.002374855}
+      rotation: {x: 0.11635929, y: -0.006384936, z: -0.03230475, w: 0.9926612}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Bip01_End17
+      parentName: Bip01_End16
+      position: {x: -0.000043262862, y: 0.086855166, z: 0}
+      rotation: {x: 0.62795025, y: -0.00040479886, z: 0.081490554, w: 0.77397525}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Bip01_End18
+      parentName: Bip01_End17
+      position: {x: 0.0001575243, y: 0.08323087, z: 0.00000019378662}
+      rotation: {x: 0.056392644, y: -0.00001634053, z: 0.0054600746, w: 0.9983938}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Bip01_End20
+      parentName: Bip01_End11
+      position: {x: 0.026796995, y: 0.25206658, z: -0.0052605313}
+      rotation: {x: 0.25346872, y: -0.01640412, z: -0.007890902, w: 0.9671723}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Bip01_End21
+      parentName: Bip01_End20
+      position: {x: -0.000093962284, y: 0.09666212, z: -0.00000009689331}
+      rotation: {x: 0.69886416, y: 0.0002656352, z: 0.08879891, w: 0.70972085}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: Bip01_End22
+      parentName: Bip01_End21
+      position: {x: 0.000015272808, y: 0.087754525, z: 0.00000038757324}
+      rotation: {x: 0.018486902, y: 0.000010871142, z: 0.002775946, w: 0.99982524}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: Bip01_End24
+      parentName: Bip01_End11
+      position: {x: -0.02956308, y: 0.24865071, z: -0.0010160232}
+      rotation: {x: 0.32011297, y: -0.014446946, z: -0.0072736247, w: 0.9472413}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Bip01_End25
+      parentName: Bip01_End24
+      position: {x: -0.000020287036, y: 0.081399485, z: -0.000000048446655}
+      rotation: {x: 0.6988919, y: 0.000119982426, z: 0.0926187, w: 0.7092051}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: Bip01_End26
+      parentName: Bip01_End25
+      position: {x: -0.0000076061247, y: 0.07330449, z: 0.00000019378662}
+      rotation: {x: 0.119399935, y: -0.000012847195, z: 0.016095547, w: 0.9927158}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Bip01_End28
+      parentName: Bip01_End11
+      position: {x: -0.082725264, y: 0.2263137, z: -0.000020444488}
+      rotation: {x: 0.3147707, y: -0.025047142, z: 0.026504455, w: 0.948467}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Bip01_End29
+      parentName: Bip01_End28
+      position: {x: 0.000005086899, y: 0.07203223, z: -0.00000019378662}
+      rotation: {x: 0.70179266, y: -0.025129672, z: 0.068462454, w: 0.7086385}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Bip01_End30
+      parentName: Bip01_End29
+      position: {x: -0.000005111122, y: 0.059860155, z: 0}
+      rotation: {x: 0.119376004, y: 0.000010303252, z: 0.016036967, w: 0.9927196}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip01_End32
+      parentName: Bip01_End4
+      position: {x: 0.17689575, y: 0.3343226, z: -0.0041935304}
+      rotation: {x: -0.52173746, y: -0.45248726, z: 0.6104728, w: -0.38777345}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bip01_End33
+      parentName: Bip01_End32
+      position: {x: -0, y: 0.36728147, z: 0}
+      rotation: {x: -0.13811633, y: 0.14002043, z: 0.054082442, w: 0.97897565}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: Bip01_End34
+      parentName: Bip01_End33
+      position: {x: -0.00000009689331, y: 0.62951857, z: 0}
+      rotation: {x: -0.010968322, y: -0.0054439427, z: 0.025065793, w: 0.99961084}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: Bip01_End35
+      parentName: Bip01_End34
+      position: {x: -0.00000009689331, y: 0.7050963, z: 0}
+      rotation: {x: -0.008410441, y: 0.07388155, z: -0.18921602, w: 0.979116}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: Bip01_End36
+      parentName: Bip01_End35
+      position: {x: -0.060017653, y: 0.07234946, z: 0.04850644}
+      rotation: {x: 0.20508274, y: 0.093421794, z: 0.16212127, w: 0.9606925}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip01_End37
+      parentName: Bip01_End36
+      position: {x: -0.0021639667, y: 0.084594645, z: -0.000000048446655}
+      rotation: {x: 0.013684483, y: -0.027051883, z: -0.1795434, w: 0.9832828}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: Bip01_End38
+      parentName: Bip01_End37
+      position: {x: -0.0046024807, y: 0.087472565, z: 0}
+      rotation: {x: -0.026569216, y: -0.011171751, z: 0.038151357, w: 0.99885625}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Bip01_End40
+      parentName: Bip01_End35
+      position: {x: -0.085671686, y: 0.24238463, z: 0.001661042}
+      rotation: {x: 0.2525125, y: 0.014045905, z: 0.026373234, w: 0.9671322}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Bip01_End41
+      parentName: Bip01_End40
+      position: {x: 0.0001371767, y: 0.08725417, z: 0}
+      rotation: {x: 0.4631436, y: -0.00015809278, z: -0.058512326, w: 0.8843497}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip01_End42
+      parentName: Bip01_End41
+      position: {x: -0.00006855201, y: 0.08301479, z: 0}
+      rotation: {x: 0.036154427, y: 0.000026816202, z: -0.00457462, w: 0.99933577}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Bip01_End44
+      parentName: Bip01_End35
+      position: {x: -0.028580086, y: 0.24324813, z: -0.0014682243}
+      rotation: {x: 0.32611772, y: 0.02279049, z: 0.011003904, w: 0.94499034}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Bip01_End45
+      parentName: Bip01_End44
+      position: {x: 0.00027939185, y: 0.09196066, z: -0.000000048446655}
+      rotation: {x: 0.575998, y: -0.0007274877, z: -0.069542654, w: 0.81448734}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1}
+    - name: Bip01_End46
+      parentName: Bip01_End45
+      position: {x: -0.000017792034, y: 0.0895706, z: 0}
+      rotation: {x: 0.01690586, y: 0.022073917, z: -0.003286263, w: 0.999608}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999998}
+    - name: Bip01_End48
+      parentName: Bip01_End35
+      position: {x: 0.02787652, y: 0.23453084, z: -0.002125936}
+      rotation: {x: 0.35460204, y: 0.017796667, z: 0.009572301, w: 0.93479896}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Bip01_End49
+      parentName: Bip01_End48
+      position: {x: 0.00003299217, y: 0.0827556, z: 0.000000048446655}
+      rotation: {x: 0.57605916, y: -0.00004432797, z: -0.07486868, w: 0.81397206}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Bip01_End50
+      parentName: Bip01_End49
+      position: {x: -0.000017828368, y: 0.074797906, z: 0}
+      rotation: {x: 0.07905815, y: 0.000018305422, z: -0.010259156, w: 0.99681723}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: Bip01_End52
+      parentName: Bip01_End35
+      position: {x: 0.086375274, y: 0.212781, z: 0.0015899224}
+      rotation: {x: 0.3954587, y: 0.022019342, z: 0.004889753, w: 0.91820675}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Bip01_End53
+      parentName: Bip01_End52
+      position: {x: 0.00012448367, y: 0.07450069, z: -0.00000024223328}
+      rotation: {x: 0.57765025, y: -0.00028799177, z: -0.0730175, w: 0.813012}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Bip01_End54
+      parentName: Bip01_End53
+      position: {x: -0.000027905273, y: 0.059207432, z: -0.00000019378662}
+      rotation: {x: 0.17176095, y: 0.00025448308, z: -0.022199262, w: 0.9848885}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Bip01_End56
+      parentName: Bip01_End1
+      position: {x: -0.23170643, y: -0.1369895, z: 0.0074701593}
+      rotation: {x: -0.048180424, y: -0.023237856, z: 0.9947892, w: 0.08679379}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bip01_End57
+      parentName: Bip01_End56
+      position: {x: 0.00000019378662, y: 1.247119, z: 0}
+      rotation: {x: -0.1637388, y: -0.0092133945, z: 0.029992994, w: 0.98600465}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: Bip01_End58
+      parentName: Bip01_End57
+      position: {x: -0.000000048446655, y: 1.0322331, z: 0.00000009689331}
+      rotation: {x: 0.5600677, y: 0.07968347, z: 0.021064019, w: 0.8243367}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
+    - name: Bip01_End59
+      parentName: Bip01_End58
+      position: {x: -0.00000009689331, y: 0.47149494, z: 0.000000048446655}
+      rotation: {x: 0.28615394, y: -0.007327276, z: 0.0021882998, w: 0.9581531}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Bip01_End61
+      parentName: Bip01_End1
+      position: {x: 0.23170643, y: -0.1369895, z: 0.008227041}
+      rotation: {x: -0.03322108, y: -0.021117138, z: 0.99600625, w: -0.08013693}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+    - name: Bip01_End62
+      parentName: Bip01_End61
+      position: {x: -0, y: 1.2473354, z: 0}
+      rotation: {x: -0.1479191, y: 0.010021021, z: -0.011269246, w: 0.9888845}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Bip01_End63
+      parentName: Bip01_End62
+      position: {x: -0.000000048446655, y: 1.0322765, z: 0}
+      rotation: {x: 0.54765844, y: -0.12520802, z: -0.024491359, w: 0.82691807}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: Bip01_End64
+      parentName: Bip01_End63
+      position: {x: -0, y: 0.47631866, z: -0.000000048446655}
+      rotation: {x: 0.28209877, y: 0.009396809, z: -0.0027631628, w: 0.9593354}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
