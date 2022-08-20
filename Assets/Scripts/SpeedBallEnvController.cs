@@ -3,27 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public enum AIType
-{
-    FUZZY = 0,
-    POCA = 1,
-    PPO = 2
-}
 public class SpeedBallEnvController : MonoBehaviour
 {
-    [System.Serializable]
-    public class PlayerInfo
-    {
-        public SpeedBallAgent Agent;
-        [HideInInspector]
-        public Vector3 StartingPos;
-        [HideInInspector]
-        public Quaternion StartingRot;
-        [HideInInspector]
-        public Rigidbody Rb;
-        [HideInInspector]
-        public Animator animator;
-    }
+    
 
     public AIType trainerType;
     /// <summary>
@@ -77,36 +59,29 @@ public class SpeedBallEnvController : MonoBehaviour
 
         foreach (var item in agentsList)
         {
-            item.StartingPos = item.Agent.transform.position;
-            item.StartingRot = item.Agent.transform.rotation;
-            item.Rb = item.Agent.agentRb;
-            item.animator = item.Agent.animator;
             if (trainerType == AIType.POCA)
             {
-                if (item.Agent.team == Team.Team1)
+                if (item.team == PlayerTeam.Team1)
                 {
-                    team1AgentGroup.RegisterAgent(item.Agent);
+                    team1AgentGroup.RegisterAgent(item.agent);
                 }
                 else
                 {
-                    team2AgentGroup.RegisterAgent(item.Agent);
+                    team2AgentGroup.RegisterAgent(item.agent);
                 }
             }
             else if (trainerType == AIType.PPO)
             {
-                if (item.Agent.team == Team.Team1)
+                if (item.team == PlayerTeam.Team1)
                 {
-                    team1.Add(item.Agent);
+                    team1.Add(item.agent);
                 }
                 else
                 {
-                    team2.Add(item.Agent);
+                    team2.Add(item.agent);
                 }
             }
-            else 
-            {
-                item.Agent.gameObject.AddComponent<SpeedBallFuzzyAI>();
-            }
+
         }
         ResetScene();
     }
@@ -164,10 +139,10 @@ public class SpeedBallEnvController : MonoBehaviour
         ball.SetActive(true);
     }
 
-    public void GoalTouched(Team scoredTeam)
+    public void GoalTouched(PlayerTeam scoredTeam)
     {
         Instantiate(vfxGoal, ball.transform.position, Quaternion.identity);
-        if (scoredTeam == Team.Team1)
+        if (scoredTeam == PlayerTeam.Team1)
         {
             team1GoalCount += 1;
             if (trainerType == AIType.FUZZY)
@@ -244,14 +219,12 @@ public class SpeedBallEnvController : MonoBehaviour
         foreach (var item in agentsList)
         {
             var randomPosX = Random.Range(-1f, 1f);
-            var newStartPos = item.Agent.initialPos + new Vector3(randomPosX, 0f, 0f);
-            var rot = item.Agent.rotSign * Random.Range(80.0f, 100.0f);
-            var newRot = Quaternion.Euler(0, rot, 0);
-            item.Agent.transform.SetPositionAndRotation(newStartPos, item.StartingRot);
+            var newStartPos = item.initialPos + new Vector3(randomPosX, 0f, 0f);
+            item.agent.transform.SetPositionAndRotation(newStartPos, item.initialRot);
 
-            item.Rb.velocity = Vector3.zero;
-            item.Rb.angularVelocity = Vector3.zero;
-            item.Agent.ResetAnimator();
+            item.rigidBody.velocity = Vector3.zero;
+            item.rigidBody.angularVelocity = Vector3.zero;
+            item.ResetAnimator();
         }
 
         //Reset Ball

@@ -15,14 +15,15 @@ public class SpeedBallFuzzyAI : MonoBehaviour
 {
 
     public PlayerState playerState;
-    public SpeedBallAgent player;
+    public PlayerInfo playerInfo;
     float restingTime;
+
     // Start is called before the first frame update
     void Start()
     {
         restingTime = Random.Range(2.0f, 5.0f);
         playerState = PlayerState.IDLE;
-        player = transform.GetComponent<SpeedBallAgent>();
+        playerInfo = transform.GetComponent<PlayerInfo>();
     }
 
     // Update is called once per frame
@@ -31,10 +32,10 @@ public class SpeedBallFuzzyAI : MonoBehaviour
         switch (playerState)
         {
             case PlayerState.IDLE:
-                player.animator.SetFloat(player.ANIM_MOVE, 0.0f, player.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, 0.0f, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
                 restingTime -= Time.deltaTime;
                 
-                if (restingTime < 0 && Vector3.Distance(player.ball.transform.position, transform.position) > 5)
+                if (restingTime < 0 && Vector3.Distance(playerInfo.ball.transform.position, transform.position) > 5)
                 {
                     playerState = PlayerState.MOVING;
                     restingTime = Random.Range(2.0f, 6.0f);
@@ -42,9 +43,9 @@ public class SpeedBallFuzzyAI : MonoBehaviour
                 break;
 
             case PlayerState.MOVING:
-                if (Vector3.Distance(player.ball.transform.position, transform.position) > 3)
+                if (Vector3.Distance(playerInfo.ball.transform.position, transform.position) > 3)
                 {
-                    MoveTowards(player.ball.transform.position);
+                    MoveTowards(playerInfo.ball.transform.position);
                 }
                 else
                 {
@@ -82,18 +83,18 @@ public class SpeedBallFuzzyAI : MonoBehaviour
             //Create rotation based on this new vector assuming that up is the global y axis.
             Quaternion targetRot = Quaternion.LookRotation(targetDir, Vector3.up);
             //Create a rotation tahat is an increment closer to our targetRot from player's rotation.
-            Quaternion newRot = Quaternion.Lerp(player.agentRb.rotation, targetRot, player.TURN_SMOOTHING * Time.fixedDeltaTime);
+            Quaternion newRot = Quaternion.Lerp(playerInfo.rigidBody.rotation, targetRot, PlayerProperties.TURN_SMOOTHING * Time.fixedDeltaTime);
             //Aply rotation
-            player.agentRb.MoveRotation(newRot);
+            playerInfo.rigidBody.MoveRotation(newRot);
 
 
-            if (player.ball.Owner == this)
+            if (playerInfo.ball.Owner == this)
             {
-                player.animator.SetFloat(player.ANIM_MOVE, Mathf.Clamp(0.75f * 2 * 0.75f, 0f, 0.75f), player.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, Mathf.Clamp(0.75f * 2 * 0.75f, 0f, 0.75f), PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
             else
             {
-                player.animator.SetFloat(player.ANIM_MOVE, 2, player.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, 2, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
         }
     }

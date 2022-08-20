@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public SpeedBallAgent Owner;
+    public PlayerInfo Owner;
     [HideInInspector]
     public Rigidbody m_Rigidbody;
     //[HideInInspector]
@@ -37,12 +37,12 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag == "GoalTeam1")
         {
-            envController.GoalTouched(Team.Team1);
+            envController.GoalTouched(PlayerTeam.Team1);
             gameObject.SetActive(false);
         }
         if (collision.gameObject.tag == "GoalTeam2")
         {
-            envController.GoalTouched(Team.Team2);
+            envController.GoalTouched(PlayerTeam.Team2);
             gameObject.SetActive(false);
         }
     }
