@@ -30,12 +30,18 @@ public static class PlayerProperties
     public static string ANIM_STEP_BACK = "StepBack";
     public static string ANIM_SHOT = "Shot";
     public static string ANIM_MOVE = "Speed";
+
     public static float SHOOTING_FORCE = 15f;
+    public static float SHOOTING_HEIGHT = 0.5f;
+    public static float MAX_SHOOTING_DISTANCE = 10f;
 
     public static float SPEED_DAMP_TIME = 0.2f;
     public static float TURN_SMOOTHING = 7f;
 
     public static float COLLIDER_MAX_TIMEOFF = 0.5f;
+
+    public static float MIN_STATE_CHANGE_TIME = 0.25f;
+    public static float MAX_STATE_CHANGE_TIME = 2.0f;
 
     public static float STAMINA_DIVIDER = 64.0f;
     public static float STAMINA_MIN = 0.5f;
@@ -44,7 +50,8 @@ public static class PlayerProperties
     public static float MAX_DISTANCE_FORMATION_POSITION = 3.0f;
     public static float MIN_DISTANCE_FORMATION_POSITION = 1.0f;
 
-    public static float MAX_DISTANCE_BALL_THRESHOLD = 2.5f;
+    public static float MAX_DISTANCE_BALL_THRESHOLD = 4f;
+    public static float MIN_DISTANCE_BALL_THRESHOLD = 1.5f;
     public static float MAX_BALL_SPEED_TOLERANCE = 8f;
     public static float MAX_BALL_LOST_DISTANCE = -2.5f;
 

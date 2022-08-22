@@ -28,9 +28,7 @@ public class Ball : MonoBehaviour
             Vector3 handPos = owner.animator.GetBoneTransform(HumanBodyBones.RightHand).position;
             Vector3 handFwd = owner.transform.forward;
             transform.position = handPos + handFwd * 0.35f;
-            col.enabled = false;
         }
-        else { col.enabled = true; }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -14,6 +14,8 @@ public class PlayerInfo : MonoBehaviour
     [HideInInspector]
     public SpeedBallFuzzyAI agentFuzzy;
     [HideInInspector]
+    public SpeedBallEnvController envController;
+    [HideInInspector]
     public Vector3 initialPos;
     [HideInInspector]
     public Quaternion initialRot;
@@ -28,7 +30,7 @@ public class PlayerInfo : MonoBehaviour
     [HideInInspector]
     public Transform goalOpponent;
     [HideInInspector]
-    public Vector2 coverageRange = new Vector2(13f, 5f);
+    public Vector2 coverageRange = new Vector2(14f, 8f);
     [HideInInspector]
     public Collider col;
     // Start is called before the first frame update
@@ -40,19 +42,12 @@ public class PlayerInfo : MonoBehaviour
         initialPos = transform.position;
         initialRot = transform.rotation;
         ball = GameObject.FindGameObjectWithTag(EnvironmentProperties.BALL_TAG).GetComponent<Ball>();
-        if (AI == AIType.POCA)
-        {
-            agent = GetComponent<SpeedBallAgent>();
-        }
-        else
-        {
-            agentFuzzy = GetComponent<SpeedBallFuzzyAI>();
-        }
-
+        envController = GetComponentInParent<SpeedBallEnvController>();
+        
         switch (playerRole)
         {
             case PlayerRole.Goalie:
-                coverageRange = new Vector2(13f, 5f);
+                coverageRange = new Vector2(14f, 8f);
                 break;
             case PlayerRole.Generic:
                 coverageRange = new Vector2(10f, -5f);
@@ -76,15 +71,19 @@ public class PlayerInfo : MonoBehaviour
 
         if (AI == AIType.FUZZY)
         {
-            gameObject.AddComponent<SpeedBallFuzzyAI>();
+            agentFuzzy = gameObject.AddComponent<SpeedBallFuzzyAI>();
             Destroy(gameObject.GetComponent<DecisionRequester>());
             Destroy(gameObject.GetComponent<SpeedBallAgent>());
             Destroy(gameObject.GetComponent<RayPerceptionSensorComponent3D>());
             Destroy(gameObject.GetComponent<BehaviorParameters>());
-           
-            return;
+
+        }
+        else 
+        {
+            agent = GetComponent<SpeedBallAgent>();
         }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -98,6 +97,17 @@ public class PlayerInfo : MonoBehaviour
         animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.IDLE_SPEED);
         animator.SetBool(PlayerProperties.ANIM_SHOT, false);
         animator.SetBool(PlayerProperties.ANIM_TACKLE, false);
+    }
+
+    public void Shoot()
+    {
+        ball.owner = null;
+        ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE,
+                                                        PlayerProperties.SHOOTING_HEIGHT,
+                                                        transform.forward.z * PlayerProperties.SHOOTING_FORCE);
+
+        animator.SetBool(PlayerProperties.ANIM_SHOT, true);
+        //StartCoroutine(ShootInSeconds(0.15f));
     }
     public void OnShot()
     {
@@ -122,6 +132,25 @@ public class PlayerInfo : MonoBehaviour
                                               PlayerProperties.MAX_BALL_LOST_DISTANCE);
     }
 
+    public Transform GetBestCandidate()
+    {
+        Transform _candidate = null;
+        float bestCandidateDistance = 10000.0f;
+
+        foreach (var item in envController.agentsList)
+        {
+            if (item.team != team && item != this) continue;
+
+            float distance = (transform.position - item.transform.position).magnitude;
+            if (distance < bestCandidateDistance)
+            {
+                _candidate = item.transform;
+                bestCandidateDistance = distance;
+            }
+        }
+        return _candidate;
+    }
+
     IEnumerator DeactivateColliderForSeconds(float waitTime, Collider _col)
     {
         float endTime = Time.time + waitTime; 
@@ -134,6 +163,22 @@ public class PlayerInfo : MonoBehaviour
         yield break;
     }
 
+    IEnumerator ShootInSeconds(float waitTime)
+    {
+        float endTime = Time.time + waitTime;
+        while (Time.time < endTime)
+        {
+            yield return null;
+        }
+        ball.owner = null;
+        ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE,
+                                                        PlayerProperties.SHOOTING_HEIGHT,
+                                                        transform.forward.z * PlayerProperties.SHOOTING_FORCE);
+
+        animator.SetBool(PlayerProperties.ANIM_SHOT, true);
+        yield break;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Ball>(out Ball _ball))
@@ -142,10 +187,14 @@ public class PlayerInfo : MonoBehaviour
             {
                 _ball.rigidBody.rotation = Quaternion.identity;
                 _ball.owner = this;
-                
+
                 if (AI == AIType.POCA)
                 {
                     agent.AddReward(PlayerRewards.REWARD_GETTING_BALL);
+                }
+                else 
+                {
+                    agentFuzzy.changeStateTime = Random.Range(PlayerProperties.MIN_STATE_CHANGE_TIME, PlayerProperties.MAX_STATE_CHANGE_TIME);
                 }
             }
         }
@@ -235,17 +284,6 @@ public class PlayerInfo : MonoBehaviour
         {
             _ball.GetComponent<Rigidbody>().rotation = Quaternion.identity;
         }
-
-        //if (collision.gameObject.tag == "Walls" || collision.gameObject.tag == "GoalTeam2" || collision.gameObject.tag == "GoalTeam1")
-        //{
-        //animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-        //if (playerInfo.ball.owner == this)
-        //{
-        //    OnBallLost();
-        //    //AddReward(PlayerProperties.REWARD_LOSSING_BALL);
-        //}
-        //AddReward(PlayerProperties.REWARD_HITTING_WALL);
-        //}
     }
 
 }

@@ -10,7 +10,7 @@ public class SpeedBallAgent : Agent
 
     #region Private Fields
 
-    private SpeedBallEnvController _envController;
+    
     private float _existential;
 
     #endregion Private Fields
@@ -19,10 +19,10 @@ public class SpeedBallAgent : Agent
     {
         playerInfo = GetComponent<PlayerInfo>();
 
-        _envController = GetComponentInParent<SpeedBallEnvController>();
-        if (_envController != null)
+        
+        if (playerInfo.envController != null)
         {
-            _existential = 1f / _envController.MaxEnvironmentSteps;
+            _existential = 1f / playerInfo.envController.MaxEnvironmentSteps;
         }
         else
         {
@@ -109,9 +109,13 @@ public class SpeedBallAgent : Agent
 
         if (playerInfo.ball.owner == this.playerInfo && actions.DiscreteActions[2] == 1)
         {
-            playerInfo.ball.owner = null;
-            playerInfo.ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE, 0.5f, transform.forward.z * PlayerProperties.SHOOTING_FORCE);
-            playerInfo.animator.SetBool(PlayerProperties.ANIM_SHOT, true);
+            playerInfo.Shoot();
+            //playerInfo.ball.owner = null;
+            //playerInfo.ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE, 
+            //                                                PlayerProperties.SHOOTING_HEIGHT, 
+            //                                                transform.forward.z * PlayerProperties.SHOOTING_FORCE);
+
+            //playerInfo.animator.SetBool(PlayerProperties.ANIM_SHOT, true);
             AddReward(PlayerRewards.REWARD_SHOOTING);
         }
     }
