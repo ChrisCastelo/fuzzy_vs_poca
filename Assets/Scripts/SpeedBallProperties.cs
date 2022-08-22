@@ -1,0 +1,76 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum PlayerTeam
+{
+    Team1 = 0,
+    Team2 = 1
+}
+
+public enum PlayerRole
+{
+    Striker,
+    Goalie,
+    Generic
+}
+
+public static class PlayerRewards
+{
+    public static float REWARD_GETTING_BALL = 0.1f;
+    public static float REWARD_LOSSING_BALL = -0.01f;
+    public static float REWARD_HITTING_WALL = -0.01f;
+    public static float REWARD_TACKLE = 0.1f;
+    public static float REWARD_SHOOTING = 0.1f;
+}
+
+public static class PlayerProperties
+{
+    public static string ANIM_TACKLE = "Tackle";
+    public static string ANIM_STEP_BACK = "StepBack";
+    public static string ANIM_SHOT = "Shot";
+    public static string ANIM_MOVE = "Speed";
+    public static float SHOOTING_FORCE = 15f;
+
+    public static float SPEED_DAMP_TIME = 0.2f;
+    public static float TURN_SMOOTHING = 7f;
+
+    public static float COLLIDER_MAX_TIMEOFF = 0.5f;
+
+    public static float STAMINA_DIVIDER = 64.0f;
+    public static float STAMINA_MIN = 0.5f;
+    public static float STAMINA_MAX = 1.0f;
+
+    public static float MAX_DISTANCE_FORMATION_POSITION = 3.0f;
+    public static float MIN_DISTANCE_FORMATION_POSITION = 1.0f;
+
+    public static float MAX_DISTANCE_BALL_THRESHOLD = 2.5f;
+    public static float MAX_BALL_SPEED_TOLERANCE = 8f;
+    public static float MAX_BALL_LOST_DISTANCE = -2.5f;
+
+    public static float RUN_SPEED = 1.0f;
+    public static float SPRINT_SPEED = 2.0f;
+    public static float JOG_SPEED = 0.5f;
+    public static float WALK_SPEED = 0.25f;
+    public static float IDLE_SPEED = 0.0f;
+
+}
+public enum AIType
+{
+    FUZZY = 0,
+    POCA = 1
+}
+
+public static class EnvironmentProperties
+{
+    public static string WALLS_TAG = "Walls";
+    public static string BALL_TAG = "Ball";
+    public static string GOAL_TEAM1_POS_TAG = "Goal1";
+    public static string GOAL_TEAM1_TAG = "GoalTeam1";
+    public static string GOAL_TEAM2_TAG = "GoalTeam2";
+    public static string GOAL_TEAM2_POS_TAG = "Goal2";
+
+}
+
+
+

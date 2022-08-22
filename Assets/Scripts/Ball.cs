@@ -4,43 +4,45 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public PlayerInfo Owner;
+    public PlayerInfo owner;
     [HideInInspector]
-    public Rigidbody m_Rigidbody;
-    //[HideInInspector]
+    public Rigidbody rigidBody;
+    [HideInInspector]
+    public Collider col;
+
     public SpeedBallEnvController envController;
 
-    private float m_BallTouchReward;
-    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        m_Rigidbody   = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
         envController = GetComponentInParent<SpeedBallEnvController>();
-
-        m_BallTouchReward = 1f / envController.MaxEnvironmentSteps;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Owner)
+        if (owner)
         {
-            Vector3 handPos = Owner.animator.GetBoneTransform(HumanBodyBones.RightHand).position;
-            Vector3 handFwd = Owner.transform.forward;
+            Vector3 handPos = owner.animator.GetBoneTransform(HumanBodyBones.RightHand).position;
+            Vector3 handFwd = owner.transform.forward;
             transform.position = handPos + handFwd * 0.35f;
+            col.enabled = false;
         }
+        else { col.enabled = true; }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "GoalTeam1")
+        if (collision.gameObject.tag == EnvironmentProperties.GOAL_TEAM1_TAG || 
+            collision.gameObject.tag == EnvironmentProperties.GOAL_TEAM1_POS_TAG)
         {
             envController.GoalTouched(PlayerTeam.Team1);
             gameObject.SetActive(false);
         }
-        if (collision.gameObject.tag == "GoalTeam2")
+        if (collision.gameObject.tag == EnvironmentProperties.GOAL_TEAM2_TAG ||
+            collision.gameObject.tag == EnvironmentProperties.GOAL_TEAM2_POS_TAG)
         {
             envController.GoalTouched(PlayerTeam.Team2);
             gameObject.SetActive(false);

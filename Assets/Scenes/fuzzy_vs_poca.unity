@@ -4086,8 +4086,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AI: 1
   team: 0
-  playerRole: 0
+  playerRole: 2
   agent: {fileID: 0}
+  agentFuzzy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   initialRot: {x: 0, y: 0, z: 0, w: 0}
   rigidBody: {fileID: 0}
@@ -4095,6 +4096,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   goalTeam: {fileID: 0}
   goalOpponent: {fileID: 0}
+  coverageRange: {x: 13, y: 5}
+  col: {fileID: 0}
 --- !u!4 &1624629519860569627
 Transform:
   m_ObjectHideFlags: 0
@@ -4150,8 +4153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trainerType: 1
   MaxEnvironmentSteps: 2000
-  ball: {fileID: 3361907678304709997}
-  ballRb: {fileID: 0}
   agentsList:
   - {fileID: 4019070594213116998}
   - {fileID: 1575641048219762478}
@@ -4160,13 +4161,12 @@ MonoBehaviour:
   - {fileID: 2476237484979381497}
   - {fileID: 7855319576058137023}
   vfxGoal: {fileID: 100002, guid: f7efb0d9df2264096af57128df85dddb, type: 3}
-  team1: []
-  team2: []
   stepsCountText: {fileID: 1584688851}
   team1GoalCountText: {fileID: 176578577}
   team2GoalCountText: {fileID: 521505655}
   team1GoalCount: 0
   team2GoalCount: 0
+  ball: {fileID: 3361907678304709997}
 --- !u!114 &1920148201099877106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4272,8 +4272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AI: 0
   team: 1
-  playerRole: 0
+  playerRole: 2
   agent: {fileID: 0}
+  agentFuzzy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   initialRot: {x: 0, y: 0, z: 0, w: 0}
   rigidBody: {fileID: 0}
@@ -4281,6 +4282,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   goalTeam: {fileID: 0}
   goalOpponent: {fileID: 0}
+  coverageRange: {x: 13, y: 5}
+  col: {fileID: 0}
 --- !u!114 &2523674559664758896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6774,6 +6777,7 @@ MonoBehaviour:
   team: 1
   playerRole: 0
   agent: {fileID: 0}
+  agentFuzzy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   initialRot: {x: 0, y: 0, z: 0, w: 0}
   rigidBody: {fileID: 0}
@@ -6781,6 +6785,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   goalTeam: {fileID: 0}
   goalOpponent: {fileID: 0}
+  coverageRange: {x: 13, y: 5}
+  col: {fileID: 0}
 --- !u!1 &4019070594213116997
 GameObject:
   m_ObjectHideFlags: 0
@@ -6822,6 +6828,7 @@ MonoBehaviour:
   team: 0
   playerRole: 0
   agent: {fileID: 0}
+  agentFuzzy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   initialRot: {x: 0, y: 0, z: 0, w: 0}
   rigidBody: {fileID: 0}
@@ -6829,6 +6836,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   goalTeam: {fileID: 0}
   goalOpponent: {fileID: 0}
+  coverageRange: {x: 13, y: 5}
+  col: {fileID: 0}
 --- !u!114 &4019070594213215044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7554,6 +7563,7 @@ MonoBehaviour:
   team: 0
   playerRole: 0
   agent: {fileID: 0}
+  agentFuzzy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   initialRot: {x: 0, y: 0, z: 0, w: 0}
   rigidBody: {fileID: 0}
@@ -7561,6 +7571,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   goalTeam: {fileID: 0}
   goalOpponent: {fileID: 0}
+  coverageRange: {x: 13, y: 5}
+  col: {fileID: 0}
 --- !u!4 &5886211700243395550
 Transform:
   m_ObjectHideFlags: 0
@@ -8202,6 +8214,7 @@ MonoBehaviour:
   team: 1
   playerRole: 1
   agent: {fileID: 0}
+  agentFuzzy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   initialRot: {x: 0, y: 0, z: 0, w: 0}
   rigidBody: {fileID: 0}
@@ -8209,6 +8222,8 @@ MonoBehaviour:
   ball: {fileID: 0}
   goalTeam: {fileID: 0}
   goalOpponent: {fileID: 0}
+  coverageRange: {x: 13, y: 5}
+  col: {fileID: 0}
 --- !u!114 &7884720651974717307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8690,8 +8705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714fc87ee1f022742afc7733b0e4cd77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Owner: {fileID: 0}
-  m_Rigidbody: {fileID: 0}
+  owner: {fileID: 0}
+  rigidBody: {fileID: 0}
+  col: {fileID: 0}
   envController: {fileID: 1873545478351965584}
 --- !u!136 &8974897786094314489
 CapsuleCollider:

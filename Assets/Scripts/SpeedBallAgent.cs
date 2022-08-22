@@ -4,8 +4,6 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Policies;
 
-
-
 public class SpeedBallAgent : Agent
 {
     public PlayerInfo playerInfo;
@@ -43,9 +41,7 @@ public class SpeedBallAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        if (playerInfo.AI == AIType.FUZZY)  return;
-        
-        if (!playerInfo.ball.Owner || playerInfo.ball.Owner.team != playerInfo.team)
+        if (!playerInfo.ball.owner || playerInfo.ball.owner.team != playerInfo.team)
         {
             // Existential penalty for Goalies.
             AddReward(-_existential);
@@ -97,7 +93,7 @@ public class SpeedBallAgent : Agent
             playerInfo.rigidBody.MoveRotation(newRot);
 
 
-            if (playerInfo.ball.Owner == this)
+            if (playerInfo.ball.owner == this.playerInfo)
             {
                 playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, Mathf.Clamp(0.75f * (horizontal * horizontal) + (vertical * vertical) * 0.75f, 0f, 0.75f), PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
@@ -111,10 +107,10 @@ public class SpeedBallAgent : Agent
             playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, 0.0f, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
         }
 
-        if (playerInfo.ball.Owner == this && actions.DiscreteActions[2] == 1)
+        if (playerInfo.ball.owner == this.playerInfo && actions.DiscreteActions[2] == 1)
         {
-            playerInfo.ball.Owner = null;
-            playerInfo.ball.m_Rigidbody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE, 0.5f, transform.forward.z * PlayerProperties.SHOOTING_FORCE);
+            playerInfo.ball.owner = null;
+            playerInfo.ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE, 0.5f, transform.forward.z * PlayerProperties.SHOOTING_FORCE);
             playerInfo.animator.SetBool(PlayerProperties.ANIM_SHOT, true);
             AddReward(PlayerRewards.REWARD_SHOOTING);
         }
@@ -122,8 +118,6 @@ public class SpeedBallAgent : Agent
        
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        if (playerInfo.AI == AIType.FUZZY) return;
-
         var discreteActionsOut = actionsOut.DiscreteActions;
 
         var horizontalAxis = Input.GetAxisRaw("Horizontal");
@@ -155,82 +149,5 @@ public class SpeedBallAgent : Agent
         }
 
         discreteActionsOut[2] = Input.GetKey(KeyCode.Mouse0) ? 1 : 0;
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Ball>(out Ball _ball))
-        {
-            if (_ball.Owner == null)
-            {
-                _ball.m_Rigidbody.rotation = Quaternion.identity;
-                _ball.Owner = this.playerInfo;
-                AddReward(PlayerRewards.REWARD_GETTING_BALL);
-            }
-        }
-        
-        if (collision.gameObject.tag == "Walls")
-        {
-            playerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-            if (playerInfo.ball.Owner == this)
-            {
-                playerInfo.OnBallLost();
-                AddReward(PlayerRewards.REWARD_LOSSING_BALL);
-            }
-            AddReward(PlayerRewards.REWARD_HITTING_WALL);
-        }
-
-        if (collision.gameObject.tag == "GoalTeam2" || collision.gameObject.tag == "GoalTeam1")
-        {
-            playerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-            AddReward(PlayerRewards.REWARD_HITTING_WALL);
-        }
-
-        if (collision.gameObject.TryGetComponent<PlayerInfo>(out PlayerInfo otherplayerInfo))
-        {
-            if (otherplayerInfo.team != playerInfo.team )
-            {
-                if (playerInfo.ball.Owner == this)
-                {
-                    playerInfo.OnBallLost();
-                    playerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-                    AddReward(PlayerRewards.REWARD_LOSSING_BALL);
-                    otherplayerInfo.animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
-                    otherplayerInfo.transform.LookAt(new Vector3(transform.position.x, 0f, transform.position.z));
-                    otherplayerInfo.agent.AddReward(PlayerRewards.REWARD_TACKLE);
-                }
-
-                if (playerInfo.ball.Owner == otherplayerInfo)
-                {
-                    otherplayerInfo.OnBallLost();
-                    playerInfo.animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
-                    transform.LookAt(new Vector3(otherplayerInfo.transform.position.x, 0f, otherplayerInfo.transform.position.z));
-                    AddReward(PlayerRewards.REWARD_GETTING_BALL);
-                    otherplayerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-                    otherplayerInfo.agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
-                }
-            }
-        }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent<Ball>(out Ball _ball))
-        {
-            _ball.GetComponent<Rigidbody>().rotation = Quaternion.identity;
-
-        }
-
-        //if (collision.gameObject.tag == "Walls" || collision.gameObject.tag == "GoalTeam2" || collision.gameObject.tag == "GoalTeam1")
-        //{
-        //animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-        //if (playerInfo.ball.Owner == this)
-        //{
-        //    OnBallLost();
-        //    //AddReward(PlayerProperties.REWARD_LOSSING_BALL);
-        //}
-        //AddReward(PlayerProperties.REWARD_HITTING_WALL);
-        //}
     }
 }

@@ -62,11 +62,11 @@ public class MoveToGoalAgent : Agent
             Quaternion newRot = Quaternion.Lerp(m_Rigidbody.rotation, targetRot, turnSmoothing * Time.fixedDeltaTime);
             //Aply rotation
             m_Rigidbody.MoveRotation(newRot);
-            m_Animator.SetFloat("Speed", Horizontal * Horizontal + Vertical * Vertical, speedDampTime, Time.fixedDeltaTime);
+            m_Animator.SetFloat("speed", Horizontal * Horizontal + Vertical * Vertical, speedDampTime, Time.fixedDeltaTime);
         }
         else
         {
-            m_Animator.SetFloat("Speed", 0.0f, speedDampTime, Time.fixedDeltaTime);
+            m_Animator.SetFloat("speed", 0.0f, speedDampTime, Time.fixedDeltaTime);
         }
 
         //transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed ;

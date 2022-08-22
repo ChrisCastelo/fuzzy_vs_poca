@@ -11,49 +11,129 @@ public enum PlayerState
     TACKLING
 }
 
+public enum TeamState
+{
+    DEFENSE,
+    OFFENSE
+}
+
 public class SpeedBallFuzzyAI : MonoBehaviour
 {
 
     public PlayerState playerState;
     public PlayerInfo playerInfo;
-    float restingTime;
+   
+    public float stamina = 64.0f;
 
+    private Vector3 _formationPos;
+    public float _distanceFormationPos;
+    private Vector3 _ballOnGround;
+    public float _distanceBall;
+   
+    public float _ballSpeed;
+    private float _changeStateTime;
+    private Quaternion _lookOnLook;
+    GameObject sphere;
     // Start is called before the first frame update
     void Start()
     {
-        restingTime = Random.Range(2.0f, 5.0f);
+        _changeStateTime = Random.Range(0.0f, 1.0f);
         playerState = PlayerState.IDLE;
         playerInfo = transform.GetComponent<PlayerInfo>();
+        _formationPos = playerInfo.initialPos;
+        _lookOnLook = Quaternion.LookRotation(_ballOnGround - transform.position);
+        sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+
+        Destroy(sphere.GetComponent<Collider>()) ;
     }
 
     // Update is called once per frame
+
     void Update()
     {
+        _formationPos.z = Mathf.Clamp(playerInfo.ball.transform.position.z, playerInfo.coverageRange.x, playerInfo.coverageRange.y);
+        _formationPos.y = 0f;
+
+        _distanceFormationPos = (transform.position - _formationPos).magnitude;
+        _ballOnGround = playerInfo.ball.transform.localPosition;
+        _ballOnGround.y = 0f;
+        _distanceBall = (transform.position - playerInfo.ball.transform.position).magnitude;
+        
+        _ballSpeed = playerInfo.ball.rigidBody.velocity.magnitude;
+        //DEBUG ONLY
+        sphere.transform.position = _formationPos;
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookOnLook, Time.deltaTime * PlayerProperties.TURN_SMOOTHING);
+
         switch (playerState)
         {
             case PlayerState.IDLE:
+
                 playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, 0.0f, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
-                restingTime -= Time.deltaTime;
-                
-                if (restingTime < 0 && Vector3.Distance(playerInfo.ball.transform.position, transform.position) > 5)
+                _changeStateTime -= Time.deltaTime;
+
+                if (_changeStateTime < 0 )
                 {
                     playerState = PlayerState.MOVING;
-                    restingTime = Random.Range(2.0f, 6.0f);
+                    _changeStateTime = Random.Range(0.0f, 2.0f);
                 }
                 break;
 
             case PlayerState.MOVING:
-                if (Vector3.Distance(playerInfo.ball.transform.position, transform.position) > 3)
+
+                if (!playerInfo.ball.owner || playerInfo.ball.owner.team != playerInfo.team)
                 {
-                    MoveTowards(playerInfo.ball.transform.position);
+                    if (_distanceBall > PlayerProperties.MAX_DISTANCE_BALL_THRESHOLD)
+                    {
+                        if (_distanceFormationPos > PlayerProperties.MAX_DISTANCE_FORMATION_POSITION)
+                        {
+                            //transform.LookAt(_formationPos);
+                            _lookOnLook = Quaternion.LookRotation(_formationPos - transform.position);
+                            playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.SPRINT_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.deltaTime);
+                        }
+                        else if (_distanceFormationPos < PlayerProperties.MIN_DISTANCE_FORMATION_POSITION)
+                        {
+                            //transform.LookAt(_ballOnGround);
+                            _lookOnLook = Quaternion.LookRotation(_ballOnGround - transform.position);
+                            playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.IDLE_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.deltaTime);
+                        }
+                        else
+                        {
+                            _lookOnLook = Quaternion.LookRotation(_formationPos - transform.position);
+                            playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.JOG_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.deltaTime);
+                        }
+                    }
+                    else //if (_ballSpeed < PlayerProperties.MAX_BALL_SPEED_TOLERANCE)
+                    {
+                        _lookOnLook = Quaternion.LookRotation(_ballOnGround - transform.position);
+                        playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.SPRINT_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.deltaTime);
+                    }
                 }
-                else
-                {
-                    playerState = PlayerState.IDLE;
-                }
+                //else if (playerInfo.ball.owner.team != playerInfo.team) //Defending
+                //{
+                //    if (_distanceBall < PlayerProperties.MAX_DISTANCE_BALL_THRESHOLD)
+                //    {
+                //        //transform.LookAt(_ballOnGround);
+                //        Quaternion lookOnLook = Quaternion.LookRotation(_ballOnGround - transform.position);
+                //        transform.rotation = Quaternion.Slerp(transform.rotation, lookOnLook, Time.deltaTime*5f);
+                //        playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.SPRINT_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                //    }
+                //}
+                else if (playerInfo.ball.owner.team == playerInfo.team)
+                { 
                 
                 
-                break;
+                }
+
+
+
+
+
+
+
+
+
+                    break;
 
             case PlayerState.PASSING:
                 
@@ -75,27 +155,6 @@ public class SpeedBallFuzzyAI : MonoBehaviour
                 
                 break;
         
-        }
-
-        void MoveTowards(Vector3 target)
-        {
-            Vector3 targetDir = target;
-            //Create rotation based on this new vector assuming that up is the global y axis.
-            Quaternion targetRot = Quaternion.LookRotation(targetDir, Vector3.up);
-            //Create a rotation tahat is an increment closer to our targetRot from player's rotation.
-            Quaternion newRot = Quaternion.Lerp(playerInfo.rigidBody.rotation, targetRot, PlayerProperties.TURN_SMOOTHING * Time.fixedDeltaTime);
-            //Aply rotation
-            playerInfo.rigidBody.MoveRotation(newRot);
-
-
-            if (playerInfo.ball.Owner == this)
-            {
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, Mathf.Clamp(0.75f * 2 * 0.75f, 0f, 0.75f), PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
-            }
-            else
-            {
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, 2, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
-            }
         }
     }
 }
