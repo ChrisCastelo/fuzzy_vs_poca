@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Policies;
+using Unity.MLAgents.Demonstrations;
 public class PlayerInfo : MonoBehaviour
 {
     public AIType AI;
@@ -33,6 +34,8 @@ public class PlayerInfo : MonoBehaviour
     public Vector2 coverageRange = new Vector2(14f, 8f);
     [HideInInspector]
     public Collider col;
+    [HideInInspector]
+    public bool isShooting;
     // Start is called before the first frame update
     void Awake()
     {
@@ -69,21 +72,23 @@ public class PlayerInfo : MonoBehaviour
             coverageRange = new Vector2(-1*coverageRange.x, -1*coverageRange.y);
         }
 
-        if (AI == AIType.FUZZY)
+        if (AI == AIType.FUZZY || AI == AIType.STATE_MACHINE)
         {
+            Destroy(gameObject.GetComponent<SpeedBallFuzzyAI>());
             agentFuzzy = gameObject.AddComponent<SpeedBallFuzzyAI>();
             Destroy(gameObject.GetComponent<DecisionRequester>());
+            Destroy(gameObject.GetComponent<DemonstrationRecorder>());
             Destroy(gameObject.GetComponent<SpeedBallAgent>());
             Destroy(gameObject.GetComponent<RayPerceptionSensorComponent3D>());
             Destroy(gameObject.GetComponent<BehaviorParameters>());
 
         }
-        else 
+        else if (AI == AIType.POCA)
         {
+            agentFuzzy = gameObject.GetComponent<SpeedBallFuzzyAI>();
             agent = GetComponent<SpeedBallAgent>();
         }
     }
-
 
     // Update is called once per frame
     void Update()
@@ -101,6 +106,10 @@ public class PlayerInfo : MonoBehaviour
 
     public void Shoot()
     {
+        //Imitation training bool -----
+        StartCoroutine(IsShootingInSeconds(0.05f));
+        //Imitation training bool -----
+
         ball.owner = null;
         ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE,
                                                         PlayerProperties.SHOOTING_HEIGHT,
@@ -108,6 +117,10 @@ public class PlayerInfo : MonoBehaviour
 
         animator.SetBool(PlayerProperties.ANIM_SHOT, true);
         //StartCoroutine(ShootInSeconds(0.15f));
+        if (AI == AIType.POCA)
+        {
+            agent.AddReward(PlayerRewards.REWARD_SHOOTING);
+        }
     }
     public void OnShot()
     {
@@ -179,6 +192,18 @@ public class PlayerInfo : MonoBehaviour
         yield break;
     }
 
+    IEnumerator IsShootingInSeconds(float waitTime)
+    {
+        float endTime = Time.time + waitTime;
+        while (Time.time < endTime)
+        {
+            isShooting = true;
+            yield return null;
+        }
+        isShooting = false;
+        yield break;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<Ball>(out Ball _ball))
@@ -192,7 +217,8 @@ public class PlayerInfo : MonoBehaviour
                 {
                     agent.AddReward(PlayerRewards.REWARD_GETTING_BALL);
                 }
-                else 
+
+                if (agentFuzzy)
                 {
                     agentFuzzy.changeStateTime = Random.Range(PlayerProperties.MIN_STATE_CHANGE_TIME, PlayerProperties.MAX_STATE_CHANGE_TIME);
                 }
@@ -201,7 +227,7 @@ public class PlayerInfo : MonoBehaviour
 
         if (collision.gameObject.tag == EnvironmentProperties.WALLS_TAG)
         {
-            animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
+            //animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
             
             if (ball.owner == this)
             {
@@ -229,9 +255,9 @@ public class PlayerInfo : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.TryGetComponent<PlayerInfo>(out PlayerInfo _otherplayerInfo))
+        if (collision.gameObject.TryGetComponent<PlayerInfo>(out PlayerInfo _otherPlayerInfo))
         {
-            if (_otherplayerInfo.team != team)
+            if (_otherPlayerInfo.team != team)
             {
                 if (ball.owner == this)
                 {
@@ -242,36 +268,32 @@ public class PlayerInfo : MonoBehaviour
                     {
                         agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
                     }
-                    else 
-                    { 
-                    
-                    }
 
-                    _otherplayerInfo.animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
-                    _otherplayerInfo.transform.LookAt(new Vector3(transform.position.x, 0f, transform.position.z));
+                    _otherPlayerInfo.animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
+                    _otherPlayerInfo.transform.LookAt(new Vector3(transform.position.x, 0f, transform.position.z));
                     
-                    if (_otherplayerInfo.AI == AIType.POCA)
+                    if (_otherPlayerInfo.AI == AIType.POCA)
                     {
-                        _otherplayerInfo.agent.AddReward(PlayerRewards.REWARD_TACKLE);
+                        _otherPlayerInfo.agent.AddReward(PlayerRewards.REWARD_TACKLE);
                     }
                 }
 
-                if (ball.owner == _otherplayerInfo)
+                if (ball.owner == _otherPlayerInfo)
                 {
-                    _otherplayerInfo.OnBallLost();
+                    _otherPlayerInfo.OnBallLost();
                     animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
-                    transform.LookAt(new Vector3(_otherplayerInfo.transform.position.x, 0f, _otherplayerInfo.transform.position.z));
+                    transform.LookAt(new Vector3(_otherPlayerInfo.transform.position.x, 0f, _otherPlayerInfo.transform.position.z));
                     
                     if (AI == AIType.POCA)
                     {
                         agent.AddReward(PlayerRewards.REWARD_GETTING_BALL);
                     }
                     
-                    _otherplayerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
+                    _otherPlayerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
 
-                    if (_otherplayerInfo.AI == AIType.POCA)
+                    if (_otherPlayerInfo.AI == AIType.POCA)
                     {
-                        _otherplayerInfo.agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
+                        _otherPlayerInfo.agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
                     }
                 }
             }

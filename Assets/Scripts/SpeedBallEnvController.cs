@@ -1,4 +1,5 @@
 using Unity.MLAgents;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -24,14 +25,10 @@ public class SpeedBallEnvController : MonoBehaviour
     public int team2GoalCount = 0;
     public Ball ball;
 
-    #region Private Fields
-
     private Vector3 _ballStartingPos;
     private int _resetTimer = 0;
     private List<SpeedBallAgent> _team1 = new List<SpeedBallAgent>();
     private List<SpeedBallAgent> _team2 = new List<SpeedBallAgent>();
-
-    #endregion Private Fields
 
     void Start()
     {
@@ -61,9 +58,9 @@ public class SpeedBallEnvController : MonoBehaviour
         }
         ResetScene();
     }
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
+
         _resetTimer += 1;
         if (_resetTimer >= MaxEnvironmentSteps && MaxEnvironmentSteps > 0)
         {
@@ -72,9 +69,10 @@ public class SpeedBallEnvController : MonoBehaviour
                 if (team1AgentGroup != null) team1AgentGroup.GroupEpisodeInterrupted();
                 if (team2AgentGroup != null) team2AgentGroup.GroupEpisodeInterrupted();
             }
-            
+
             ResetScene();
         }
+
         if (stepsCountText)
         {
             stepsCountText.SetText(_resetTimer.ToString());
@@ -98,6 +96,7 @@ public class SpeedBallEnvController : MonoBehaviour
         ball.rigidBody.velocity = Vector3.zero;
         ball.rigidBody.angularVelocity = Vector3.zero;
         ball.gameObject.SetActive(true);
+
     }
 
     public void GoalTouched(PlayerTeam scoredTeam)
@@ -108,10 +107,16 @@ public class SpeedBallEnvController : MonoBehaviour
             team1GoalCount += 1;
             if (trainerType == AIType.POCA)
             {
-                if (team1AgentGroup != null) team1AgentGroup.SetGroupReward(1f);
-                if (team2AgentGroup != null)  team2AgentGroup.SetGroupReward(-1f);
-                //FinishTeamEpisode(team1);
-                //FinishTeamEpisode(team2);
+                if (team1AgentGroup != null)
+                {
+                    team1AgentGroup.SetGroupReward(1f);
+                    team1AgentGroup.EndGroupEpisode();
+                }
+                if (team2AgentGroup != null)
+                {
+                    team2AgentGroup.SetGroupReward(-1f);
+                    team2AgentGroup.EndGroupEpisode();
+                }
             }
         }
         else
@@ -119,18 +124,25 @@ public class SpeedBallEnvController : MonoBehaviour
             team2GoalCount += 1;
             if (trainerType == AIType.POCA)
             {
-                if (team1AgentGroup != null) team1AgentGroup.SetGroupReward(-1f);
-                if (team2AgentGroup != null) team2AgentGroup.SetGroupReward(1f);
-                //FinishTeamEpisode(team1);
-                //FinishTeamEpisode(team2);
+                if (team1AgentGroup != null)
+                {
+                    team1AgentGroup.SetGroupReward(-1f);
+                    team1AgentGroup.EndGroupEpisode();
+                }
+                if (team2AgentGroup != null)
+                {
+                    team2AgentGroup.SetGroupReward(1f);
+                    team2AgentGroup.EndGroupEpisode();
+                }
             }
             
         }
-        Invoke("ResetAgents", 0.5f);
-        //ResetScene();
+        //Invoke("ResetAgents", 0.5f);
+        Invoke("ResetScene", 0.5f);
+        
     }
 
-    private void ResetAgents()
+    public void ResetAgents()
     {
         //Reset Agents
         foreach (var item in agentsList)
@@ -155,5 +167,6 @@ public class SpeedBallEnvController : MonoBehaviour
         team2GoalCount = 0;
         //Reset Agents
         ResetAgents();
+
     }
 }

@@ -7,14 +7,9 @@ using Unity.MLAgents.Policies;
 public class SpeedBallAgent : Agent
 {
     public PlayerInfo playerInfo;
-
-    #region Private Fields
-
     
     private float _existential;
 
-    #endregion Private Fields
-    
     public override void Initialize()
     {
         playerInfo = GetComponent<PlayerInfo>();
@@ -41,11 +36,11 @@ public class SpeedBallAgent : Agent
     }
     public override void OnActionReceived(ActionBuffers actions)
     {
-        if (!playerInfo.ball.owner || playerInfo.ball.owner.team != playerInfo.team)
+        if (playerInfo.ball.owner && playerInfo.ball.owner.team != playerInfo.team)
         {
-            // Existential penalty for Goalies.
             AddReward(-_existential);
         }
+        if (playerInfo.agentFuzzy) return;
 
         int horizontalAxis = actions.DiscreteActions[0];
         int horizontal = 0;
@@ -85,21 +80,18 @@ public class SpeedBallAgent : Agent
             cameraR *= horizontal;
 
             Vector3 targetDir = cameraFwd + cameraR;
-            //Create rotation based on this new vector assuming that up is the global y axis.
             Quaternion targetRot = Quaternion.LookRotation(targetDir, Vector3.up);
-            //Create a rotation tahat is an increment closer to our targetRot from player's rotation.
             Quaternion newRot = Quaternion.Lerp(playerInfo.rigidBody.rotation, targetRot, PlayerProperties.TURN_SMOOTHING * Time.fixedDeltaTime);
-            //Aply rotation
             playerInfo.rigidBody.MoveRotation(newRot);
 
 
             if (playerInfo.ball.owner == this.playerInfo)
             {
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, Mathf.Clamp(0.75f * (horizontal * horizontal) + (vertical * vertical) * 0.75f, 0f, 0.75f), PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.RUN_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
             else
             {
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, horizontal * horizontal + vertical * vertical, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.SPRINT_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
         }
         else
@@ -110,21 +102,16 @@ public class SpeedBallAgent : Agent
         if (playerInfo.ball.owner == this.playerInfo && actions.DiscreteActions[2] == 1)
         {
             playerInfo.Shoot();
-            //playerInfo.ball.owner = null;
-            //playerInfo.ball.rigidBody.velocity = new Vector3(transform.forward.x * PlayerProperties.SHOOTING_FORCE, 
-            //                                                PlayerProperties.SHOOTING_HEIGHT, 
-            //                                                transform.forward.z * PlayerProperties.SHOOTING_FORCE);
-
-            //playerInfo.animator.SetBool(PlayerProperties.ANIM_SHOT, true);
-            AddReward(PlayerRewards.REWARD_SHOOTING);
         }
     }
        
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+
         var discreteActionsOut = actionsOut.DiscreteActions;
 
-        var horizontalAxis = Input.GetAxisRaw("Horizontal");
+        //var horizontalAxis = Input.GetAxisRaw("Horizontal");
+        var horizontalAxis = playerInfo.agentFuzzy.horizontal;
         if (horizontalAxis > 0)
         {
             discreteActionsOut[0] = 2;
@@ -138,7 +125,8 @@ public class SpeedBallAgent : Agent
             discreteActionsOut[0] = 0;
         }
 
-        var verticalAxis = Input.GetAxisRaw("Vertical");
+        //var verticalAxis = Input.GetAxisRaw("Vertical");
+        var verticalAxis = playerInfo.agentFuzzy.vertical;
         if (verticalAxis > 0)
         {
             discreteActionsOut[1] = 2;
@@ -152,6 +140,7 @@ public class SpeedBallAgent : Agent
             discreteActionsOut[1] = 0;
         }
 
-        discreteActionsOut[2] = Input.GetKey(KeyCode.Mouse0) ? 1 : 0;
+        //discreteActionsOut[2] = Input.GetKey(KeyCode.Mouse0) ? 1 : 0;
+        discreteActionsOut[2] = playerInfo.isShooting ? 1 : 0;
     }
 }

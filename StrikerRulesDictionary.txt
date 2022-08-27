@@ -1,0 +1,34 @@
+Rule 1,IF BallOwner IS None AND BallDistance IS Near THEN Rotation IS TowardsBall
+Rule 2,IF BallOwner IS None AND BallDistance IS Near THEN Speed IS Sprint
+Rule 3,IF BallOwner IS None AND BallDistance IS Medium THEN Rotation IS TowardsBall
+Rule 4,IF BallOwner IS None AND BallDistance IS Medium THEN Speed IS Run
+Rule 5,IF BallOwner IS None AND BallDistance IS Far THEN Speed IS Idle
+Rule 6,IF BallOwner IS None AND BallDistance IS Far THEN Rotation IS TowardsBall
+Rule 7,IF BallOwner IS Opponent AND BallDistance IS Near THEN Rotation IS TowardsBall
+Rule 8,IF BallOwner IS Opponent AND BallDistance IS Near THEN Speed IS Sprint
+Rule 9,IF BallOwner IS Opponent AND BallDistance IS Medium THEN Rotation IS TowardsBall
+Rule 10,IF BallOwner IS Opponent AND BallDistance IS Medium THEN Speed IS Run
+Rule 11,IF BallOwner IS Opponent AND BallDistance IS Far THEN Speed IS Idle
+Rule 12,IF BallOwner IS Opponent AND BallDistance IS Far THEN Rotation IS TowardsBall
+Rule 13,IF BallOwner IS Team THEN Rotation IS TowardsGoal
+Rule 14,IF BallOwner IS Team AND GoalDistance IS Far THEN Speed IS Jog
+Rule 15,IF BallOwner IS Team AND GoalDistance IS Medium THEN Speed IS Run
+Rule 16,IF BallOwner IS Team AND GoalDistance IS Near THEN Speed IS Sprint
+Rule 17,IF StrategyDistance IS Far THEN Rotation IS TowardsFormationSpot
+Rule 18,IF StrategyDistance IS Far THEN Speed IS Sprint
+Rule 19,IF BallOwner IS Me THEN Rotation IS TowardsGoal
+Rule 20,IF BallOwner IS Me THEN Speed IS Run
+Rule 21,IF BallOwner IS Me AND GoalDistance is Near THEN ShootOrPass IS Shoot
+Rule 22,IF BallOwner IS Me AND GoalDistance is Medium THEN Rotation IS TowardsGoal
+Rule 23,IF BallOwner IS Me AND GoalDistance is Medium THEN ShootOrPass IS Shoot
+Rule 24,IF BallOwner IS Me AND GoalDistance is Far THEN Rotation IS TowardsGoal
+Rule 25,IF BallOwner IS Me AND GoalDistance is Far THEN ShootOrPass IS DoNotShoot
+Rule 26,IF BallOwner IS None THEN ShootOrPass IS DoNotShoot
+Rule 27,IF BallOwner IS Opponent THEN ShootOrPass IS DoNotShoot
+Rule 28,IF BallOwner IS Team THEN ShootOrPass IS DoNotShoot
+Rule 29,IF BallOwner IS Team AND BallDistance IS Near THEN Rotation IS TowardsGoal
+Rule 30,IF BallOwner IS Team AND BallDistance IS Near THEN Speed IS Sprint
+Rule 31,IF BallOwner IS Me AND TeammateAvailable IS Found THEN Rotation IS TowardsTeammate
+Rule 32,IF BallOwner IS Me AND TeammateAvailable IS Found THEN ShootOrPass IS Pass
+Rule 33,IF BallOwner IS Me AND TeammateAvailable IS None THEN Rotation IS TowardsGoal
+Rule 34,IF BallOwner IS Me AND TeammateAvailable IS None THEN ShootOrPass IS DoNotShoot

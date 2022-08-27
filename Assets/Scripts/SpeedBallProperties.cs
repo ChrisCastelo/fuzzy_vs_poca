@@ -15,13 +15,43 @@ public enum PlayerRole
     Generic
 }
 
+public enum BallOwner
+{
+    None=1,
+    Opponent = 2,
+    Team = 3,
+    Me = 4
+}
+
+public enum TeammateAvailable
+{
+    Found = 1,
+    None = 2
+}
+
+public enum ShootOrPass
+{
+    Shoot = 1,
+    DoNotShoot = 2,
+    Pass = 3
+}
+
+public enum RotationObjective
+{
+    Ball = 1,
+    FormationSpot = 2,
+    Goal = 3,
+    Teammate = 4
+}
+
 public static class PlayerRewards
 {
     public static float REWARD_GETTING_BALL = 0.1f;
-    public static float REWARD_LOSSING_BALL = -0.01f;
-    public static float REWARD_HITTING_WALL = -0.01f;
     public static float REWARD_TACKLE = 0.1f;
     public static float REWARD_SHOOTING = 0.1f;
+
+    public static float REWARD_LOSSING_BALL = -0.01f;
+    public static float REWARD_HITTING_WALL = -0.01f;
 }
 
 public static class PlayerProperties
@@ -52,7 +82,7 @@ public static class PlayerProperties
 
     public static float MAX_DISTANCE_BALL_THRESHOLD = 4f;
     public static float MIN_DISTANCE_BALL_THRESHOLD = 1.5f;
-    public static float MAX_BALL_SPEED_TOLERANCE = 8f;
+    public static float MAX_BALL_SPEED_TOLERANCE = 6f;
     public static float MAX_BALL_LOST_DISTANCE = -2.5f;
 
     public static float RUN_SPEED = 1.0f;
@@ -65,7 +95,8 @@ public static class PlayerProperties
 public enum AIType
 {
     FUZZY = 0,
-    POCA = 1
+    POCA = 1,
+    STATE_MACHINE =2
 }
 
 public static class EnvironmentProperties
@@ -76,6 +107,8 @@ public static class EnvironmentProperties
     public static string GOAL_TEAM1_TAG = "GoalTeam1";
     public static string GOAL_TEAM2_TAG = "GoalTeam2";
     public static string GOAL_TEAM2_POS_TAG = "Goal2";
+
+    public static float FIELD_SIZE = 30.0f;
 
 }
 
