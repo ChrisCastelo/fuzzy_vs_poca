@@ -3,6 +3,7 @@
 public class BallOut : MonoBehaviour
 {
     SpeedBallEnvController speedBallEnvController;
+    private bool _resetCompleted = false;
     private void Start()
     {
         speedBallEnvController = GetComponentInParent<SpeedBallEnvController>();
@@ -27,10 +28,12 @@ public class BallOut : MonoBehaviour
     public void ResetSceneInSeconds()
     {
         speedBallEnvController.ResetScene();
+        _resetCompleted = false;
     }
 
     void OnTriggerEnter(Collider col)
     {
+        if (_resetCompleted) return;
         if (col.gameObject.tag == "Ball")
         {
             ResetScene();
@@ -39,10 +42,12 @@ public class BallOut : MonoBehaviour
         {
             ResetScene();
         }
-
+        _resetCompleted = true;
     }
     void OnTriggerStay(Collider col)
     {
+        if (_resetCompleted) return;
+        
         if (col.gameObject.tag == "Ball")
         {
             ResetScene();
@@ -51,5 +56,6 @@ public class BallOut : MonoBehaviour
         {
             ResetScene();
         }
+        _resetCompleted = true;
     }
 }

@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: ba21fad45021d5740b98c99ecbc5cdeb
+timeCreated: 1428953294
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bleachers_01
+    100002: field_glow
+    100004: field_main
+    100006: glowy_beams
+    100008: main_frame_glow
+    100010: main_lines_glow
+    100012: main_wall_01
+    100014: main_wall_glow_01
+    100016: metal_tile_01
+    100018: publicity_01
+    100020: ramp_border_01
+    100022: rock_formation_02
+    100024: rock_small
+    100026: siren_base
+    100028: siren_crystal
+    100030: siren_turn_01
+    100032: siren_turn_02
+    100034: siren_turn_03
+    100036: siren_turn_04
+    100038: //RootNode
+    100040: wall_panel_01
+    100042: bridge
+    100044: portal
+    100046: ramp_border_02
+    400000: bleachers_01
+    400002: field_glow
+    400004: field_main
+    400006: glowy_beams
+    400008: main_frame_glow
+    400010: main_lines_glow
+    400012: main_wall_01
+    400014: main_wall_glow_01
+    400016: metal_tile_01
+    400018: publicity_01
+    400020: ramp_border_01
+    400022: rock_formation_02
+    400024: rock_small
+    400026: siren_base
+    400028: siren_crystal
+    400030: siren_turn_01
+    400032: siren_turn_02
+    400034: siren_turn_03
+    400036: siren_turn_04
+    400038: //RootNode
+    400040: wall_panel_01
+    400042: bridge
+    400044: portal
+    400046: ramp_border_02
+    2300000: bleachers_01
+    2300002: field_glow
+    2300004: field_main
+    2300006: glowy_beams
+    2300008: main_frame_glow
+    2300010: main_lines_glow
+    2300012: main_wall_01
+    2300014: main_wall_glow_01
+    2300016: metal_tile_01
+    2300018: publicity_01
+    2300020: ramp_border_01
+    2300022: rock_formation_02
+    2300024: rock_small
+    2300026: siren_base
+    2300028: siren_crystal
+    2300030: siren_turn_01
+    2300032: siren_turn_02
+    2300034: siren_turn_03
+    2300036: siren_turn_04
+    2300038: wall_panel_01
+    2300040: bridge
+    2300042: portal
+    2300044: ramp_border_02
+    3300000: bleachers_01
+    3300002: field_glow
+    3300004: field_main
+    3300006: glowy_beams
+    3300008: main_frame_glow
+    3300010: main_lines_glow
+    3300012: main_wall_01
+    3300014: main_wall_glow_01
+    3300016: metal_tile_01
+    3300018: publicity_01
+    3300020: ramp_border_01
+    3300022: rock_formation_02
+    3300024: rock_small
+    3300026: siren_base
+    3300028: siren_crystal
+    3300030: siren_turn_01
+    3300032: siren_turn_02
+    3300034: siren_turn_03
+    3300036: siren_turn_04
+    3300038: wall_panel_01
+    3300040: bridge
+    3300042: portal
+    3300044: ramp_border_02
+    4300000: main_lines_glow
+    4300002: main_frame_glow
+    4300004: siren_base
+    4300006: wall_panel_01
+    4300008: ramp_border_01
+    4300010: metal_tile_01
+    4300012: field_glow
+    4300014: field_main
+    4300016: glowy_beams
+    4300018: rock_formation_02
+    4300020: rock_small
+    4300022: publicity_01
+    4300024: main_wall_01
+    4300026: main_wall_glow_01
+    4300028: bleachers_01
+    4300030: siren_turn_02
+    4300032: siren_turn_03
+    4300034: siren_turn_04
+    4300036: siren_crystal
+    4300038: siren_turn_01
+    4300040: ramp_border_02
+    4300042: portal
+    4300044: bridge
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

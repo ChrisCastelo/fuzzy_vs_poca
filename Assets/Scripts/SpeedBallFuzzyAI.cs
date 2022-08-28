@@ -79,6 +79,7 @@ public class SpeedBallFuzzyAI : MonoBehaviour
                 catch
                 {
                     Debug.Log("Something went wrong with rule: " + line);
+                    Debug.Log("Defaulting to base rule book");
                     IS = new InferenceSystem(fuzzyDB, new CentroidDefuzzifier(1000));
                     FuzzyLogic.FuzzyRulesDictionary(IS);
                     break;
@@ -110,7 +111,7 @@ public class SpeedBallFuzzyAI : MonoBehaviour
         _distanceBall = (transform.position - playerInfo.ball.transform.position).magnitude;
         _ballSpeed = playerInfo.ball.rigidBody.velocity.magnitude;
         _velocity = playerInfo.rigidBody.velocity.magnitude;
-         _candidate = playerInfo.GetBestCandidate();
+        _candidate = playerInfo.GetBestCandidate();
         //Keep rotation towards objective
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookOnLook, Time.deltaTime * PlayerProperties.TURN_SMOOTHING);
 
@@ -280,7 +281,6 @@ public class SpeedBallFuzzyAI : MonoBehaviour
                                 }
                                 else
                                 {
-                                    Transform _candidate = playerInfo.GetBestCandidate();
                                     if (_candidate != null)
                                     {
                                         transform.LookAt(new Vector3(_candidate.position.x, 0.0f, _candidate.position.z));
