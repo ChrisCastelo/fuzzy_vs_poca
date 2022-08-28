@@ -36,6 +36,27 @@ public class PlayerInfo : MonoBehaviour
     public Collider col;
     [HideInInspector]
     public bool isShooting;
+    [HideInInspector]
+    public float stamina = PlayerProperties.STAMINA_MAX;
+
+    private GUIStyle _textStyle;
+    private void OnGUI()
+    {
+        
+        if (envController.toggleDebug )
+        {
+            //GUI STyle
+            _textStyle = new GUIStyle(GUI.skin.box);
+            _textStyle.fontSize = 10;
+            _textStyle.alignment = TextAnchor.MiddleLeft;
+            _textStyle.hover.textColor = Color.white;
+
+            Vector3 posBar = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 3f, 0));
+            GUI.TextField(new Rect(posBar.x - 30, (Screen.height - posBar.y), 100, 20), 
+                "Stamina: " + (int)stamina, _textStyle );
+        }
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -46,7 +67,8 @@ public class PlayerInfo : MonoBehaviour
         initialRot = transform.rotation;
         ball = GameObject.FindGameObjectWithTag(EnvironmentProperties.BALL_TAG).GetComponent<Ball>();
         envController = GetComponentInParent<SpeedBallEnvController>();
-        
+
+
         switch (playerRole)
         {
             case PlayerRole.Goalie:
@@ -90,10 +112,12 @@ public class PlayerInfo : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (stamina < PlayerProperties.STAMINA_MIN)
+        {
+            animator.SetBool(PlayerProperties.ANIM_DEATH, true);
+        }
     }
 
     public void ResetAnimator()
@@ -102,6 +126,7 @@ public class PlayerInfo : MonoBehaviour
         animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.IDLE_SPEED);
         animator.SetBool(PlayerProperties.ANIM_SHOT, false);
         animator.SetBool(PlayerProperties.ANIM_TACKLE, false);
+        animator.SetBool(PlayerProperties.ANIM_DEATH, false);
     }
 
     public void Shoot()
@@ -227,8 +252,6 @@ public class PlayerInfo : MonoBehaviour
 
         if (collision.gameObject.tag == EnvironmentProperties.WALLS_TAG)
         {
-            //animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-            
             if (ball.owner == this)
             {
                 OnBallLost();
@@ -243,12 +266,14 @@ public class PlayerInfo : MonoBehaviour
             {
                 agent.AddReward(PlayerRewards.REWARD_HITTING_WALL);
             }
+            stamina -= PlayerProperties.STAMINA_WALL_COLLISION_DAMAGE;
         }
 
         if (collision.gameObject.tag == EnvironmentProperties.GOAL_TEAM1_TAG || collision.gameObject.tag == EnvironmentProperties.GOAL_TEAM2_TAG)
         {
             animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-            
+            stamina -= PlayerProperties.STAMINA_WALL_COLLISION_DAMAGE;
+
             if (AI == AIType.POCA)
             {
                 agent.AddReward(PlayerRewards.REWARD_HITTING_WALL);
@@ -263,6 +288,7 @@ public class PlayerInfo : MonoBehaviour
                 {
                     OnBallLost();
                     animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
+                    stamina -= PlayerProperties.STAMINA_OPPONENT_COLLISION_DAMAGE;
 
                     if (AI == AIType.POCA)
                     {
@@ -278,24 +304,24 @@ public class PlayerInfo : MonoBehaviour
                     }
                 }
 
-                if (ball.owner == _otherPlayerInfo)
-                {
-                    _otherPlayerInfo.OnBallLost();
-                    animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
-                    transform.LookAt(new Vector3(_otherPlayerInfo.transform.position.x, 0f, _otherPlayerInfo.transform.position.z));
+                //if (ball.owner == _otherPlayerInfo)
+                //{
+                //    _otherPlayerInfo.OnBallLost();
+                //    animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
+                //    transform.LookAt(new Vector3(_otherPlayerInfo.transform.position.x, 0f, _otherPlayerInfo.transform.position.z));
                     
-                    if (AI == AIType.POCA)
-                    {
-                        agent.AddReward(PlayerRewards.REWARD_GETTING_BALL);
-                    }
+                //    if (AI == AIType.POCA)
+                //    {
+                //        agent.AddReward(PlayerRewards.REWARD_GETTING_BALL);
+                //    }
                     
-                    _otherPlayerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
+                //    _otherPlayerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
 
-                    if (_otherPlayerInfo.AI == AIType.POCA)
-                    {
-                        _otherPlayerInfo.agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
-                    }
-                }
+                //    if (_otherPlayerInfo.AI == AIType.POCA)
+                //    {
+                //        _otherPlayerInfo.agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
+                //    }
+                //}
             }
         }
     }

@@ -60,6 +60,7 @@ public static class PlayerProperties
     public static string ANIM_STEP_BACK = "StepBack";
     public static string ANIM_SHOT = "Shot";
     public static string ANIM_MOVE = "Speed";
+    public static string ANIM_DEATH = "Death";
 
     public static float SHOOTING_FORCE = 15f;
     public static float SHOOTING_HEIGHT = 0.5f;
@@ -73,9 +74,11 @@ public static class PlayerProperties
     public static float MIN_STATE_CHANGE_TIME = 0.25f;
     public static float MAX_STATE_CHANGE_TIME = 2.0f;
 
-    public static float STAMINA_DIVIDER = 64.0f;
+    public static float STAMINA_WALL_COLLISION_DAMAGE = 2.0f;
+    public static float STAMINA_OPPONENT_COLLISION_DAMAGE = 5.0f;
     public static float STAMINA_MIN = 0.5f;
-    public static float STAMINA_MAX = 1.0f;
+    public static float STAMINA_MAX = 100f;
+    public static float STAMINA_DIVIDER = 64f;
 
     public static float MAX_DISTANCE_FORMATION_POSITION = 3.0f;
     public static float MIN_DISTANCE_FORMATION_POSITION = 1.0f;

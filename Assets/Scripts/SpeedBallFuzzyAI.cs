@@ -18,12 +18,9 @@ public class SpeedBallFuzzyAI : MonoBehaviour
     #region Public Fields
     public PlayerState playerState;
     public PlayerInfo playerInfo;
-    
     public float changeStateTime;
-    public float stamina = 64.0f;
     public float vertical;
     public float horizontal;
-
     public float newSpeed;
     public float newRotation;
     public float shootPass;
@@ -92,12 +89,7 @@ public class SpeedBallFuzzyAI : MonoBehaviour
         }
         //Fuzzy Rules Dictionary --------------
         ///////////////////////////////////////////////////////////
-
-
-
     }
-
-
 
     void Update()
     {
@@ -195,7 +187,8 @@ public class SpeedBallFuzzyAI : MonoBehaviour
                         break;
                 }
                 _lookOnLook = Quaternion.LookRotation(rotObjective - transform.position);
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, newSpeed, PlayerProperties.SPEED_DAMP_TIME, Time.deltaTime);
+                float staminaSpeedAdjusted = Mathf.Clamp((playerInfo.stamina / PlayerProperties.STAMINA_DIVIDER), PlayerProperties.JOG_SPEED, 1.0f);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, newSpeed* staminaSpeedAdjusted, PlayerProperties.SPEED_DAMP_TIME, Time.deltaTime);
 
                 switch ((int)shootPass)
                 {

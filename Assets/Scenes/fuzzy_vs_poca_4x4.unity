@@ -3264,7 +3264,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b2f64d68f42abf743bef760e59191cea, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 060884c40f82f0049a4c097905eafbbb, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: SpeedBall-Striker
@@ -15937,7 +15937,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 97a54fb43a3cda14da713e64bd04f587, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 9103d127dae2b39458bd19ade03a8e73, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: SpeedBall-Goalie
@@ -16334,7 +16334,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b2f64d68f42abf743bef760e59191cea, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 060884c40f82f0049a4c097905eafbbb, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: SpeedBall-Generic
@@ -18491,7 +18491,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 2d556e15bd2f8cd429b1b6ed8b2e1cd8, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: ace18323313a980499c6b2af98afbd49, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: SpeedBall-Striker

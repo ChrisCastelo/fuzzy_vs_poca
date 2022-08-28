@@ -24,13 +24,21 @@ public class SpeedBallEnvController : MonoBehaviour
     public int team1GoalCount = 0;
     public int team2GoalCount = 0;
     public Ball ball;
+    public bool toggleDebug = false;
 
     private Vector3 _ballStartingPos;
     private int _resetTimer = 0;
     private List<SpeedBallAgent> _team1 = new List<SpeedBallAgent>();
     private List<SpeedBallAgent> _team2 = new List<SpeedBallAgent>();
+    
+    
+    
+    private void OnGUI()
+    {
+        toggleDebug = GUI.Toggle(new Rect(10, Screen.height - 30, 100, 30), toggleDebug, "Debug Info");
+    }
 
-    void Start()
+        void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Ball").GetComponent<Ball>();
         _ballStartingPos = new Vector3(ball.transform.position.x, ball.transform.position.y, ball.transform.position.z);
@@ -150,7 +158,7 @@ public class SpeedBallEnvController : MonoBehaviour
             var randomPosX = Random.Range(-1f, 1f);
             var newStartPos = item.initialPos + new Vector3(randomPosX, 0f, 0f);
             item.transform.SetPositionAndRotation(newStartPos, item.initialRot);
-
+            item.stamina = PlayerProperties.STAMINA_MAX;
             item.rigidBody.velocity = Vector3.zero;
             item.rigidBody.angularVelocity = Vector3.zero;
             item.ResetAnimator();

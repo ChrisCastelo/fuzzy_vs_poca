@@ -83,15 +83,15 @@ public class SpeedBallAgent : Agent
             Quaternion targetRot = Quaternion.LookRotation(targetDir, Vector3.up);
             Quaternion newRot = Quaternion.Lerp(playerInfo.rigidBody.rotation, targetRot, PlayerProperties.TURN_SMOOTHING * Time.fixedDeltaTime);
             playerInfo.rigidBody.MoveRotation(newRot);
-
+            float staminaSpeedAdjusted = Mathf.Clamp((playerInfo.stamina / PlayerProperties.STAMINA_DIVIDER), PlayerProperties.JOG_SPEED, 1.0f);
 
             if (playerInfo.ball.owner == this.playerInfo)
             {
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.RUN_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.RUN_SPEED* staminaSpeedAdjusted, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
             else
             {
-                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.SPRINT_SPEED, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
+                playerInfo.animator.SetFloat(PlayerProperties.ANIM_MOVE, PlayerProperties.SPRINT_SPEED* staminaSpeedAdjusted, PlayerProperties.SPEED_DAMP_TIME, Time.fixedDeltaTime);
             }
         }
         else
