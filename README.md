@@ -85,3 +85,7 @@ To resume training or restart a new one type the following commands:
 <br>
 <code>mlagents-learn config/SpeedBall.yaml --run-id=RunIdExample</code>
 
+### Evaluation - Viewing the results
+We can see the tensorboard of the results of the training by typing:
+<code>tensorboard --logdir results --port 6006</code> 
+and then going to <code>http://localhost:6006/</code>
