@@ -5,9 +5,9 @@ BSc Computer Science – Machine Learning and Artificial Intelligence
 
 ## Instructions Fuzzy Logic
 Users can opt to iterate on this project and modify Fuzzy Logic behaviour by editing the rules for each existing player role:
--	Generic Player Rules
--	Goalie Player Rules
--	Striker Player Rules
+-	[Generic Player Rules](https://github.com/ChrisCastelo/fuzzy_vs_poca/blob/main/GenericRulesDictionary.txt)
+-	[Goalie Player Rules](https://github.com/ChrisCastelo/fuzzy_vs_poca/blob/main/GoalieRulesDictionary.txt)
+-	[Striker Player Rules](https://github.com/ChrisCastelo/fuzzy_vs_poca/blob/main/StrikerRulesDictionary.txt)
 
 An example of this rule is as follows:
 
