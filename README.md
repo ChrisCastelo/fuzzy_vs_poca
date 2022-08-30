@@ -1,28 +1,87 @@
 # Fuzzy vs POCA
-## Kane and Abel: AIs that play games
+## Fuzzy and POCA: AIs that play games
 BSc Computer Science – Machine Learning and Artificial Intelligence
 <br>CM3070: Computer Science Final Project
 <br>By Chris Castelo
 
+## Instructions Fuzzy Logic
+Users can opt to iterate on this project and modify Fuzzy Logic behaviour by editing the rules for each existing player role:
+-	Generic Player Rules
+-	Goalie Player Rules
+-	Striker Player Rules
 
-### PROJECT INTRODUCTION
-The following is a project to the final project of the BSc Computer Science - Machine
-Learning and Artificial Intelligence degree of the University of London. 
+An example of this rule is as follows:
 
-It aims to explain the motivations and details behind this project as well as the chosen template. 
+<code>Rule 2,IF BallOwner IS None AND BallDistance IS Near THEN Speed IS Sprint</code>
 
-#### Template
-The chosen template is the Artificial Intelligence template "Kane and Abel: AIs that play games."
+This type of rule will apply logic to the Fuzzy Logic AI which will decided accordingly and output of speed.
 
-#### Motivations
-The primary motivation for this is to learn and explore in-depth advanced methods of
-collaborative training for AIs and implement those techniques within the constraints of natural
-motion, which can be utilized in video game production.
-After analyzing a few examples of newly implemented methods for such approaches, we find that
-in most cases, Machine Learning based AIs are portrayed within realms of the unnatural motion
-constraints, as often they are trained with simple boxes that come to life through simple motion
-constraints. One can argue that this method is used to optimize training. However, the resulting
-AI behavior, although coherent to expectations of intelligent AI, is often not equivalent to those
-we would see in a shipped game with traditional state machine-based AI. The proposition for this
-project is to train our Machine Learning based AI within the realms of natural motion given by the
-constraints of a humanoid biped to obtain greater quality in movement and behavior.
+### Supported Inputs:
+<br>
+<code>BallOwner IS None</code>
+<code>BallOwner IS Opponent</code>
+<code>BallOwner IS Team</code>
+<code>BallOwner IS Me</code>
+<br>
+<code>BallDistance IS Near</code>
+<code>BallDistance IS Medium</code>
+<code>BallDistance IS Far</code>
+<br>
+<code>GoalDistance IS Near</code>
+<code>GoalDistance IS Medium</code>
+<code>GoalDistance IS Far</code>
+<br>
+<code>StrategyDistance IS Far</code>
+<code>StrategyDistance IS Medium</code>
+<code>StrategyDistance IS Near</code>
+<br>
+<code>TeammateAvailable IS None</code>
+<code>TeammateAvailable IS Found</code>
+
+### Supported Outputs:
+<code>Rotation IS TowardsGoal</code>
+<code>Rotation IS TowardsBall</code>
+<code>Rotation IS TowardsFormationSpot</code>
+<br>
+<code>Speed IS Idle</code>
+<code>Speed IS Walk</code>
+<code>Speed IS Jog</code>
+<code>Speed IS Run</code>
+<code>Speed IS Sprint</code>
+<br>
+<code>ShootOrPass IS Pass</code>
+<code>ShootOrPass IS Shoot</code>
+<code>ShootOrPass IS DoNotShoot</code>
+
+### Supported Operators:
+<code>IF</code>
+<code>THEN</code>
+<code>AND</code>
+<code>OR</code>
+<code>IS</code>
+
+
+## Instructions MA-POCA
+
+Users can also iterate in our neuro network based AI MA-POCA by modifying the hyperparameters of it: Hyperparameters file
+
+In order to train a new brain or resume training we first need to setup our virtual environment by following these steps:
+
+-Python version used: 3.79 https://www.python.org/downloads/release/python-379/
+-Navigate to project root (Unity project root) e.g.: cd C:\fuzzy_vs_poca\
+
+Then create a virtual environment:
+
+1.	Create a new environment with python -m venv venv
+2.	Activate the environment with venv\Scripts\activate
+3.	Upgrade to the latest pip version using pip install --upgrade pip
+4.	Install pytorch 
+pip install torch==1.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+5.	Now install ML-Agents with pip install mlagents
+6.	To verify everything installed correctly type the help command of mlagents, that is mlagents-learn –help . Now we are ready to resume training.
+
+To resume training or restart a new one type the following commands:
+
+mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample --resume
+mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample
+
