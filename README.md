@@ -81,6 +81,7 @@ Then create a virtual environment:
 
 To resume training or restart a new one type the following commands:
 
-<code>mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample --resume</code>
-<code>mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample</code>
+<code>mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample --resume</code> 
+<br>
+<code>mlagents-learn config/SpeedBall.yaml --run-id=RunIdExample</code>
 
