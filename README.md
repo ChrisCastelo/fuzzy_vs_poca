@@ -63,25 +63,25 @@ This type of rule will apply logic to the Fuzzy Logic AI which will decided acco
 
 ## Instructions MA-POCA
 
-Users can also iterate in our neuro network based AI MA-POCA by modifying the hyperparameters of it: Hyperparameters file
+Users can also iterate in our neuro network based AI MA-POCA by modifying the hyperparameters of it:[Hyperparameters](https://github.com/ChrisCastelo/fuzzy_vs_poca/blob/main/config/SpeedBall.yaml)
 
 In order to train a new brain or resume training we first need to setup our virtual environment by following these steps:
 
 -Python version used: 3.79 https://www.python.org/downloads/release/python-379/
--Navigate to project root (Unity project root) e.g.: cd C:\fuzzy_vs_poca\
+-Navigate to project root (Unity project root) e.g.: <code> cd C:\fuzzy_vs_poca\ </code>
 
 Then create a virtual environment:
 
-1.	Create a new environment with python -m venv venv
-2.	Activate the environment with venv\Scripts\activate
-3.	Upgrade to the latest pip version using pip install --upgrade pip
+1.	Create a new environment with <code>python -m venv venv</code>
+2.	Activate the environment with <code>venv\Scripts\activate</code>
+3.	Upgrade to the latest pip version using <code>pip install --upgrade pip</code>
 4.	Install pytorch 
-pip install torch==1.7.0 -f https://download.pytorch.org/whl/torch_stable.html
-5.	Now install ML-Agents with pip install mlagents
-6.	To verify everything installed correctly type the help command of mlagents, that is mlagents-learn –help . Now we are ready to resume training.
+<code>pip install torch==1.7.0 -f https://download.pytorch.org/whl/torch_stable.html</code>
+5.	Now install ML-Agents with <code>pip install mlagents</code>
+6.	To verify everything installed correctly type the help command of mlagents, that is <code>mlagents-learn –help</code>. Now we are ready to resume training.
 
 To resume training or restart a new one type the following commands:
 
-mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample --resume
-mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample
+<code>mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample --resume</code>
+<code>mlagents-learn config/SpeedBall_ImitationLearning.yaml --run-id=RunIdExample</code>
 
