@@ -45,7 +45,6 @@ public class PlayerInfo : MonoBehaviour
         
         if (envController.toggleDebug )
         {
-            //GUI STyle
             _textStyle = new GUIStyle(GUI.skin.box);
             _textStyle.fontSize = 10;
             _textStyle.alignment = TextAnchor.MiddleLeft;
@@ -57,7 +56,7 @@ public class PlayerInfo : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -303,25 +302,6 @@ public class PlayerInfo : MonoBehaviour
                         _otherPlayerInfo.agent.AddReward(PlayerRewards.REWARD_TACKLE);
                     }
                 }
-
-                //if (ball.owner == _otherPlayerInfo)
-                //{
-                //    _otherPlayerInfo.OnBallLost();
-                //    animator.SetBool(PlayerProperties.ANIM_TACKLE, true);
-                //    transform.LookAt(new Vector3(_otherPlayerInfo.transform.position.x, 0f, _otherPlayerInfo.transform.position.z));
-                    
-                //    if (AI == AIType.POCA)
-                //    {
-                //        agent.AddReward(PlayerRewards.REWARD_GETTING_BALL);
-                //    }
-                    
-                //    _otherPlayerInfo.animator.SetBool(PlayerProperties.ANIM_STEP_BACK, true);
-
-                //    if (_otherPlayerInfo.AI == AIType.POCA)
-                //    {
-                //        _otherPlayerInfo.agent.AddReward(PlayerRewards.REWARD_LOSSING_BALL);
-                //    }
-                //}
             }
         }
     }

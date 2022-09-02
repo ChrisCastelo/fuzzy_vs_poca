@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public enum PlayerTeam
 {
     Team1 = 0,
@@ -75,7 +71,7 @@ public static class PlayerProperties
     public static float MAX_STATE_CHANGE_TIME = 2.0f;
 
     public static float STAMINA_WALL_COLLISION_DAMAGE = 2.0f;
-    public static float STAMINA_OPPONENT_COLLISION_DAMAGE = 5.0f;
+    public static float STAMINA_OPPONENT_COLLISION_DAMAGE = 10.0f;
     public static float STAMINA_MIN = 0.5f;
     public static float STAMINA_MAX = 100f;
     public static float STAMINA_DIVIDER = 64f;

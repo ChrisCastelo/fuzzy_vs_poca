@@ -1,44 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using AForge.Fuzzy;
-//using AI4Unity.Fuzzy;
 
 public class FuzzyLogic : MonoBehaviour
 {
-    private void Start()
-    {
-        //Fuzzy Database --------------
-        //Database fuzzyDB = FuzzyDataBase();
-        //Fuzzy Database
-        ///////////////////////////////////////////////////////////
-
-        //Inference engine --------------
-        //AForge.Fuzzy.InferenceSystem IS = new AForge.Fuzzy.InferenceSystem(fuzzyDB, new CentroidDefuzzifier(1000));
-        //Inference engine --------------
-        ///////////////////////////////////////////////////////////
-
-        //Fuzzy Rules Dictionary --------------
-        //FuzzyRulesDictionary(IS);
-        //Fuzzy Rules Dictionary --------------
-        ///////////////////////////////////////////////////////////
-        
-        //// setting inputs
-        //IS.SetInput("BallOwner", 2f);
-        //IS.SetInput("BallDistance", 1.2f);
-        //IS.SetInput("BallOwner", 4.0f);
-        //// getting outputs
-        //float newSpeed = IS.Evaluate("Speed");
-        //float newRotation = IS.Evaluate("Rotation");
-        //float shootPass = IS.Evaluate("ShootOrPass");
-
-
-        //Debug.Log("Speed: "+ newSpeed);
-        //Debug.Log("Rotation: " + newRotation);
-        //Debug.Log("ShootOrPass: " + shootPass);
-
-    }
-
     public static Database FuzzyDataBase()
     {
         //Distance Ball----------------------

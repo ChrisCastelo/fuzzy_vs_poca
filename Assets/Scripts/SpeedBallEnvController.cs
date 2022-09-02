@@ -145,8 +145,8 @@ public class SpeedBallEnvController : MonoBehaviour
             }
             
         }
-        //Invoke("ResetAgents", 0.5f);
-        Invoke("ResetScene", 0.5f);
+        Invoke("ResetAgents", 0.5f);
+        //Invoke("ResetScene", 0.5f);
         
     }
 
@@ -158,7 +158,7 @@ public class SpeedBallEnvController : MonoBehaviour
             var randomPosX = Random.Range(-1f, 1f);
             var newStartPos = item.initialPos + new Vector3(randomPosX, 0f, 0f);
             item.transform.SetPositionAndRotation(newStartPos, item.initialRot);
-            item.stamina = PlayerProperties.STAMINA_MAX;
+            
             item.rigidBody.velocity = Vector3.zero;
             item.rigidBody.angularVelocity = Vector3.zero;
             item.ResetAnimator();
@@ -169,6 +169,10 @@ public class SpeedBallEnvController : MonoBehaviour
     }
     public void ResetScene()
     {
+        foreach (var item in agentsList)
+        {
+            item.stamina = PlayerProperties.STAMINA_MAX;
+        }
         //Reset Timer
         _resetTimer = 0;
         team1GoalCount = 0;
