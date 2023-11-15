@@ -1,5 +1,4 @@
 # Fuzzy and MA-POCA: AIs that play games
-BSc Computer Science – Machine Learning and Artificial Intelligence
 <br>By Chris Castelo
 
 ## Instructions Fuzzy Logic
