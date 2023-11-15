@@ -1,6 +1,5 @@
 # Fuzzy and MA-POCA: AIs that play games
 BSc Computer Science – Machine Learning and Artificial Intelligence
-<br>CM3070: Computer Science Final Project
 <br>By Chris Castelo
 
 ## Instructions Fuzzy Logic
